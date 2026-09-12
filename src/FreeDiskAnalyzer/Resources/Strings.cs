@@ -160,6 +160,7 @@ public static class Strings
     public static string Update_DownloadFailedTitle => Get(nameof(Update_DownloadFailedTitle));
     public static string Update_DownloadFailedBody => Get(nameof(Update_DownloadFailedBody));
     public static string Update_Download => Get(nameof(Update_Download));
+    public static string Update_WhatsNew => Get(nameof(Update_WhatsNew));
     public static string Update_Downloading => Get(nameof(Update_Downloading));
     public static string Update_Dismiss => Get(nameof(Update_Dismiss));
 

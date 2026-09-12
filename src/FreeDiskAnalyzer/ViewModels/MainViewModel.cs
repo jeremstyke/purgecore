@@ -118,6 +118,13 @@ public sealed partial class MainViewModel : ObservableObject
     private void DismissUpdateBanner() => IsUpdateBannerVisible = false;
 
     [RelayCommand]
+    private void OpenWhatsNew()
+    {
+        if (_updateInfo?.BlogArticleUrl is not { } url) return;
+        Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+    }
+
+    [RelayCommand]
     private async Task DownloadAndInstallUpdateAsync()
     {
         if (_updateInfo?.DownloadUrl is null) return;

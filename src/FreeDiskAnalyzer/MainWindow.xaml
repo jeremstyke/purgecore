@@ -59,9 +59,9 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Height="30">
-                                <Border Background="#33FFFFFF" CornerRadius="8" Width="28" Height="28" VerticalAlignment="Center">
+                                <Border Background="{Binding IconBrush}" CornerRadius="8" Width="28" Height="28" VerticalAlignment="Center">
                                     <TextBlock Text="{Binding Glyph}" FontFamily="{DynamicResource AppIconFontFamily}"
-                                               Foreground="{Binding IconBrush}" HorizontalAlignment="Center"
+                                               Foreground="White" HorizontalAlignment="Center"
                                                FontSize="15" VerticalAlignment="Center"/>
                                 </Border>
                                 <TextBlock Text="{Binding Label}" Margin="10,0,0,0" VerticalAlignment="Center"
@@ -107,10 +107,15 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0" Text="{Binding UpdateBannerText}" Foreground="White"
                                VerticalAlignment="Center" FontWeight="SemiBold"/>
-                    <Button Grid.Column="1" Command="{Binding DownloadAndInstallUpdateCommand}"
+                    <Button Grid.Column="1" Command="{Binding OpenWhatsNewCommand}"
+                            Margin="0,0,12,0" Background="Transparent" Foreground="White" BorderThickness="0" Cursor="Hand">
+                        <TextBlock Text="{x:Static res:Strings.Update_WhatsNew}" TextDecorations="Underline"/>
+                    </Button>
+                    <Button Grid.Column="2" Command="{Binding DownloadAndInstallUpdateCommand}"
                             Margin="0,0,12,0" Padding="14,6" Background="White" Foreground="{DynamicResource AccentBrush}"
                             BorderThickness="0" Cursor="Hand">
                         <TextBlock>
@@ -126,7 +131,7 @@
                             </TextBlock.Style>
                         </TextBlock>
                     </Button>
-                    <Button Grid.Column="2" Command="{Binding DismissUpdateBannerCommand}"
+                    <Button Grid.Column="3" Command="{Binding DismissUpdateBannerCommand}"
                             Content="{x:Static res:Strings.Update_Dismiss}"
                             Background="Transparent" Foreground="White" BorderThickness="0" Cursor="Hand"/>
                 </Grid>
