@@ -46,7 +46,7 @@ public sealed class SafeDeleteService : ISafeDeleteService
             // still trigger that native dialog partway through. Checking
             // every file first means we either delete the whole folder
             // cleanly or skip it, never get stuck showing a popup.
-            foreach (var file in Directory.EnumerateFiles(path, "*", SearchOption.AllDirectories))
+            foreach (var file in Directory.EnumerateFiles(path, "*", System.IO.SearchOption.AllDirectories))
             {
                 if (IsFileLocked(file)) return false;
             }
