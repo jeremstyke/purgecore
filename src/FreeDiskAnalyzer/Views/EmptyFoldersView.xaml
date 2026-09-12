@@ -17,6 +17,7 @@
                 <TextBlock Text="{x:Static res:Strings.Risk_Low}" Style="{StaticResource CaptionTextStyle}"/>
             </StackPanel>
             <Button Content="{x:Static res:Strings.EmptyFolders_DeleteAll}" HorizontalAlignment="Left" Margin="0,0,0,20"
+                    Style="{StaticResource PrimaryButtonStyle}"
                     Command="{Binding DeleteAllFoldersCommand}"
                     Visibility="{Binding HasScanResult, Converter={StaticResource BoolToVis}}"/>
         </StackPanel>
@@ -62,12 +63,15 @@
 
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                                             <Button Content="{x:Static res:Strings.LargeFiles_Open}" Margin="0,0,8,0"
+                                                    Style="{StaticResource OutlineButtonStyle}" Padding="12,6" FontSize="12"
                                                     Command="{Binding DataContext.OpenFolderCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                                     CommandParameter="{Binding}"/>
                                             <Button Content="{x:Static res:Strings.LargeFiles_ShowInExplorer}" Margin="0,0,8,0"
+                                                    Style="{StaticResource OutlineButtonStyle}" Padding="12,6" FontSize="12"
                                                     Command="{Binding DataContext.ShowInExplorerCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                                     CommandParameter="{Binding}"/>
                                             <Button Content="{x:Static res:Strings.EmptyFolders_Delete}"
+                                                    Style="{StaticResource OutlineButtonStyle}" Padding="12,6" FontSize="12"
                                                     Command="{Binding DataContext.DeleteFolderCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                                     CommandParameter="{Binding}"/>
                                         </StackPanel>

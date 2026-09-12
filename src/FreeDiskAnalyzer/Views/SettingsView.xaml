@@ -38,6 +38,7 @@
             </Border>
 
             <Button Content="{x:Static res:Strings.Settings_Reset}" Command="{Binding ResetSettingsCommand}"
+                    Style="{StaticResource OutlineButtonStyle}"
                     HorizontalAlignment="Left"/>
 
         </StackPanel>

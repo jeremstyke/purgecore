@@ -67,6 +67,7 @@
                                               CommandParameter="{Binding}"/>
 
                                 <Button Grid.Column="2" Content="{x:Static res:Strings.Startup_Remove}"
+                                        Style="{StaticResource OutlineButtonStyle}" Padding="10,4" FontSize="11"
                                         Command="{Binding DataContext.DeleteStartupItemCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                         CommandParameter="{Binding}"/>
                             </Grid>

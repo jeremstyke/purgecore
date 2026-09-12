@@ -43,9 +43,11 @@
                                                    FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,16,0"
                                                    Foreground="{DynamicResource TextPrimaryBrush}"/>
                                         <Button Content="{x:Static res:Strings.LargeFiles_Open}" Margin="0,0,8,0"
+                                                Style="{StaticResource OutlineButtonStyle}" Padding="12,6" FontSize="12"
                                                 Command="{Binding DataContext.OpenFolderCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                                 CommandParameter="{Binding}"/>
                                         <Button Content="{x:Static res:Strings.LargeFiles_ShowInExplorer}"
+                                                Style="{StaticResource OutlineButtonStyle}" Padding="12,6" FontSize="12"
                                                 Command="{Binding DataContext.ShowInExplorerCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                                 CommandParameter="{Binding}"/>
                                     </StackPanel>

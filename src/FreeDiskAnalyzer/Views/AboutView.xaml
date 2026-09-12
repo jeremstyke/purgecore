@@ -21,6 +21,7 @@
         <Button Content="{x:Static res:Strings.Sidebar_ReportBug}" Style="{StaticResource OutlineButtonStyle}"
                 HorizontalAlignment="Center" Command="{Binding ReportBugCommand}" Margin="0,0,0,12"/>
         <Button Content="{x:Static res:Strings.About_Coffee}" HorizontalAlignment="Center"
+                Style="{StaticResource OutlineButtonStyle}"
                 Command="{Binding OpenCoffeeCommand}" Margin="0,0,0,20"/>
         <StackPanel Visibility="{Binding HasSupporters, Converter={StaticResource BoolToVis}}" Margin="0,0,0,20">
             <TextBlock Text="{x:Static res:Strings.About_SupportersTitle}" Style="{StaticResource CaptionTextStyle}"
