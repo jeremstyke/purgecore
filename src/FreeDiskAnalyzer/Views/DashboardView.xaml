@@ -42,6 +42,24 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
+            <!-- NordVPN affiliate card: kept right after the drive cards so
+                 it's visible without scrolling on a small screen, rather
+                 than buried at the bottom of the page. -->
+            <Border Style="{StaticResource CardStyle}" Background="{DynamicResource AccentBrushLight}" Margin="0,0,0,24" Padding="28">
+                <StackPanel>
+                    <TextBlock Text="{x:Static res:Strings.Dashboard_NordVpnTitle}" FontWeight="Bold" FontSize="20"
+                               Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                    <TextBlock Text="{x:Static res:Strings.Dashboard_NordVpnBody}" TextWrapping="Wrap" FontSize="15"
+                               Style="{StaticResource BodyTextStyle}" Margin="0,0,0,18"/>
+                    <Button Content="{x:Static res:Strings.Dashboard_LearnMore}" Style="{StaticResource PrimaryButtonStyle}"
+                            HorizontalAlignment="Left" Padding="22,12" FontSize="15" Command="{Binding OpenNordVpnCommand}"/>
+                    <TextBlock Margin="0,14,0,0" Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap">
+                        <Run Text="🔗"/>
+                        <Run Text="{x:Static res:Strings.Dashboard_AffiliateDisclosure}"/>
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+
             <!-- Selected drive detail + last scan summary -->
             <Grid Margin="0,0,0,24">
                 <Grid.ColumnDefinitions>
@@ -112,21 +130,6 @@
                 </StackPanel>
             </Border>
 
-            <!-- NordVPN affiliate card -->
-            <Border Style="{StaticResource CardStyle}" Background="{DynamicResource AccentBrushLight}" Margin="0,0,0,24" Padding="28">
-                <StackPanel>
-                    <TextBlock Text="{x:Static res:Strings.Dashboard_NordVpnTitle}" FontWeight="Bold" FontSize="20"
-                               Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
-                    <TextBlock Text="{x:Static res:Strings.Dashboard_NordVpnBody}" TextWrapping="Wrap" FontSize="15"
-                               Style="{StaticResource BodyTextStyle}" Margin="0,0,0,18"/>
-                    <Button Content="{x:Static res:Strings.Dashboard_LearnMore}" Style="{StaticResource PrimaryButtonStyle}"
-                            HorizontalAlignment="Left" Padding="22,12" FontSize="15" Command="{Binding OpenNordVpnCommand}"/>
-                    <TextBlock Margin="0,14,0,0" Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap">
-                        <Run Text="🔗"/>
-                        <Run Text="{x:Static res:Strings.Dashboard_AffiliateDisclosure}"/>
-                    </TextBlock>
-                </StackPanel>
-            </Border>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

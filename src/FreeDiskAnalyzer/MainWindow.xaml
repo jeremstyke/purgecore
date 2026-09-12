@@ -71,6 +71,16 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
 
+                <Button DockPanel.Dock="Bottom" Command="{Binding OpenSupportersCommand}"
+                        Style="{StaticResource OutlineButtonStyle}"
+                        Foreground="White" BorderBrush="#66FFFFFF"
+                        Margin="12,0,12,8">
+                    <TextBlock Foreground="White">
+                        <Run Text="💜"/>
+                        <Run Text="{x:Static res:Strings.Sidebar_Supporters}"/>
+                    </TextBlock>
+                </Button>
+
                 <Button DockPanel.Dock="Bottom" Command="{Binding OpenCoffeeCommand}"
                         Style="{StaticResource OutlineButtonStyle}"
                         Foreground="White" BorderBrush="#66FFFFFF"

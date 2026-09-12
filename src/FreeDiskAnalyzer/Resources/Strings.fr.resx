@@ -210,6 +210,7 @@
   <data name="About_License" xml:space="preserve"><value>Tous droits réservés. Voir LICENSE dans le dépôt.</value></data>
   <data name="About_Coffee" xml:space="preserve"><value>Offrir un café</value></data>
   <data name="Sidebar_ReportBug" xml:space="preserve"><value>Signaler un bug</value></data>
+  <data name="Sidebar_Supporters" xml:space="preserve"><value>Nos soutiens</value></data>
 
   <data name="ComingSoon_Subtitle" xml:space="preserve"><value>Cette section arrive dans une prochaine mise à jour.</value></data>
 </root>

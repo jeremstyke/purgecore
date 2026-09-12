@@ -227,10 +227,20 @@ public sealed partial class MainViewModel : ObservableObject
     }
 
     [RelayCommand]
+    private void OpenSupporters()
+    {
+        var isFrench = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr";
+        var url = isFrench ? SupportersUrlFr : SupportersUrlEn;
+        Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+    }
+
+    [RelayCommand]
     private void ReportBug()
     {
         Process.Start(new ProcessStartInfo(ReportBugUrl) { UseShellExecute = true });
     }
 
     public const string ReportBugUrl = "mailto:juryjeremy@gmail.com?subject=PurgeCore%20-%20Bug%20report";
+    public const string SupportersUrlEn = "https://jeremstyke.github.io/purgecore/supporters.html";
+    public const string SupportersUrlFr = "https://jeremstyke.github.io/purgecore/fr/supporters.html";
 }
