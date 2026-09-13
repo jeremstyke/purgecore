@@ -10,6 +10,7 @@
     <!-- Secondary accents, used purposefully for variety (category bars,
          icons), same palette as the website -->
     <SolidColorBrush x:Key="TealBrush" Color="#2DD4BF"/>
+    <SolidColorBrush x:Key="TealBrushLight" Color="#134E4A"/>
     <SolidColorBrush x:Key="VioletBrush" Color="#A78BFA"/>
     <SolidColorBrush x:Key="AmberBrush" Color="#FBBF24"/>
     <SolidColorBrush x:Key="RoseBrush" Color="#FB7185"/>

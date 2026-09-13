@@ -127,6 +127,7 @@
   <data name="Performance_DnsFlushedFailure" xml:space="preserve"><value>Couldn't flush the DNS cache. This is unusual, try again or restart your computer.</value></data>
 
   <data name="Performance_BatteryTitle" xml:space="preserve"><value>Battery health</value></data>
+  <data name="Performance_BatterySubtitle" xml:space="preserve"><value>Windows' own diagnostic report, one click away.</value></data>
   <data name="Performance_BatteryBody" xml:space="preserve"><value>Generates Windows' own battery report: design capacity vs current full-charge capacity, and usage history over time. Opens in your browser once ready.</value></data>
   <data name="Performance_GenerateBatteryReport" xml:space="preserve"><value>🔋 Generate battery report</value></data>
   <data name="Performance_BatteryReportFailed" xml:space="preserve"><value>Couldn't generate the battery report. Try again, or run "powercfg /batteryreport" yourself from a command prompt.</value></data>

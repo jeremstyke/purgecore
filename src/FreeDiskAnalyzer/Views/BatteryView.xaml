@@ -9,34 +9,46 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Margin="0,8,0,16">
-            <TextBlock Text="{x:Static res:Strings.Performance_BatteryTitle}" FontWeight="SemiBold" FontSize="16"
-                       Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+        <StackPanel Grid.Row="0" Margin="0,8,0,20" Orientation="Horizontal">
+            <Border Background="{DynamicResource TealBrush}" CornerRadius="12" Width="44" Height="44" Margin="0,0,14,0">
+                <TextBlock Text="🔋" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{x:Static res:Strings.Performance_BatteryTitle}" FontWeight="Bold" FontSize="20"
+                           Foreground="{DynamicResource TextPrimaryBrush}"/>
+                <TextBlock Text="{x:Static res:Strings.Performance_BatterySubtitle}" Style="{StaticResource CaptionTextStyle}"/>
+            </StackPanel>
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <Border Style="{StaticResource CardStyle}" Margin="0,0,0,20"
+                <Border Style="{StaticResource CardStyle}" Background="{DynamicResource TealBrushLight}" Padding="28"
                         Visibility="{Binding HasBattery, Converter={StaticResource BoolToVis}}">
                     <StackPanel>
-                        <TextBlock Text="{x:Static res:Strings.Performance_BatteryBody}" TextWrapping="Wrap"
-                                   Style="{StaticResource BodyTextStyle}" Margin="0,0,0,16"/>
+                        <TextBlock Text="{x:Static res:Strings.Performance_BatteryBody}" TextWrapping="Wrap" FontSize="15"
+                                   Style="{StaticResource BodyTextStyle}" Margin="0,0,0,20"/>
                         <Button Content="{x:Static res:Strings.Performance_GenerateBatteryReport}" Style="{StaticResource PrimaryButtonStyle}"
-                                HorizontalAlignment="Left" Command="{Binding GenerateReportCommand}"/>
-                        <StackPanel Orientation="Horizontal" Margin="0,12,0,0"
+                                HorizontalAlignment="Left" Padding="22,12" FontSize="15" Command="{Binding GenerateReportCommand}"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,16,0,0"
                                     Visibility="{Binding IsGeneratingReport, Converter={StaticResource BoolToVis}}">
                             <local:LoadingDotsView Margin="0,0,8,0"/>
                             <TextBlock Text="{x:Static res:Strings.Performance_Running}" Style="{StaticResource CaptionTextStyle}"/>
                         </StackPanel>
-                        <TextBlock Text="{x:Static res:Strings.Performance_BatteryReportFailed}" Style="{StaticResource BodyTextStyle}" TextWrapping="Wrap"
-                                   Margin="0,12,0,0" Visibility="{Binding ReportFailed, Converter={StaticResource BoolToVis}}"/>
+                        <Border Background="#FEF2F2" CornerRadius="8" Padding="12" Margin="0,16,0,0"
+                                Visibility="{Binding ReportFailed, Converter={StaticResource BoolToVis}}">
+                            <TextBlock Text="{x:Static res:Strings.Performance_BatteryReportFailed}" TextWrapping="Wrap"
+                                       Foreground="#B91C1C" FontSize="13"/>
+                        </Border>
                     </StackPanel>
                 </Border>
 
-                <Border Style="{StaticResource CardStyle}"
+                <Border Style="{StaticResource CardStyle}" Padding="32"
                         Visibility="{Binding HasBattery, Converter={StaticResource InverseBoolToVis}}">
-                    <TextBlock Text="{x:Static res:Strings.Performance_BatteryNoBattery}" TextWrapping="Wrap"
-                               Style="{StaticResource BodyTextStyle}"/>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="🖥️" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                        <TextBlock Text="{x:Static res:Strings.Performance_BatteryNoBattery}" TextWrapping="Wrap"
+                                   Style="{StaticResource BodyTextStyle}" TextAlignment="Center"/>
+                    </StackPanel>
                 </Border>
             </StackPanel>
         </ScrollViewer>

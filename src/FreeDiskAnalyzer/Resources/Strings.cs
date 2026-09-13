@@ -110,6 +110,7 @@ public static class Strings
     public static string Performance_DnsFlushedFailure => Get(nameof(Performance_DnsFlushedFailure));
 
     public static string Performance_BatteryTitle => Get(nameof(Performance_BatteryTitle));
+    public static string Performance_BatterySubtitle => Get(nameof(Performance_BatterySubtitle));
     public static string Performance_BatteryBody => Get(nameof(Performance_BatteryBody));
     public static string Performance_GenerateBatteryReport => Get(nameof(Performance_GenerateBatteryReport));
     public static string Performance_BatteryReportFailed => Get(nameof(Performance_BatteryReportFailed));

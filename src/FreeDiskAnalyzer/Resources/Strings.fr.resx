@@ -127,6 +127,7 @@
   <data name="Performance_DnsFlushedFailure" xml:space="preserve"><value>Impossible de vider le cache DNS. C'est inhabituel, réessayez ou redémarrez votre ordinateur.</value></data>
 
   <data name="Performance_BatteryTitle" xml:space="preserve"><value>Santé de la batterie</value></data>
+  <data name="Performance_BatterySubtitle" xml:space="preserve"><value>Le rapport de diagnostic propre à Windows, à un clic.</value></data>
   <data name="Performance_BatteryBody" xml:space="preserve"><value>Génère le rapport de batterie propre à Windows : capacité d'origine face à la capacité de charge maximale actuelle, et historique d'utilisation dans le temps. S'ouvre dans votre navigateur une fois prêt.</value></data>
   <data name="Performance_GenerateBatteryReport" xml:space="preserve"><value>🔋 Générer le rapport de batterie</value></data>
   <data name="Performance_BatteryReportFailed" xml:space="preserve"><value>Impossible de générer le rapport de batterie. Réessayez, ou lancez vous-même "powercfg /batteryreport" depuis une invite de commande.</value></data>
