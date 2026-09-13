@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore v1.11.0 : Santé de la batterie</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-0-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-0-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>PurgeCore v1.11.0 ajoute un onglet Batterie, générant le rapport de diagnostic de batterie propre à Windows en un clic. Masqué automatiquement sur les PC de bureau.</description>
+    </item>
+    <item>
       <title>PurgeCore a maintenant un fichier PAD</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/pad-file-available.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/pad-file-available.html</guid>

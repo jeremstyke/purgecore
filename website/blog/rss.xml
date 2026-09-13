@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore v1.11.0: Battery Health</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-0-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-0-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>PurgeCore v1.11.0 adds a Battery Health tab, generating Windows' own battery diagnostic report in one click. Hidden automatically on desktop PCs.</description>
+    </item>
+    <item>
       <title>PurgeCore Now Has a PAD File</title>
       <link>https://jeremstyke.github.io/purgecore/blog/pad-file-available.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/pad-file-available.html</guid>
