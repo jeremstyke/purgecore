@@ -14,7 +14,7 @@ public sealed class SupportersService : ISupportersService
             client.DefaultRequestHeaders.UserAgent.ParseAdd("FreeDiskAnalyzer-App");
 
             var json = await client.GetStringAsync(SupportersUrl, cancellationToken);
-            var doc = JsonDocument.Parse(json);
+            using var doc = JsonDocument.Parse(json);
 
             if (!doc.RootElement.TryGetProperty("supporters", out var supportersElement) ||
                 supportersElement.ValueKind != JsonValueKind.Array)

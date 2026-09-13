@@ -31,12 +31,15 @@ public sealed class BatteryReportService : IBatteryReportService
 
         try
         {
+            // Deliberately not redirecting stdout/stderr: they're never read
+            // here, and redirecting without draining the pipe can deadlock
+            // if the process ever writes enough to fill the OS pipe buffer
+            // while this awaits WaitForExitAsync. Nothing is lost since
+            // there's no window to show the output in anyway (CreateNoWindow).
             var startInfo = new ProcessStartInfo("powercfg", $"/batteryreport /output \"{outputPath}\"")
             {
                 UseShellExecute = false,
-                CreateNoWindow = true,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true
+                CreateNoWindow = true
             };
 
             using var process = Process.Start(startInfo);
