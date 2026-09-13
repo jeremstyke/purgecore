@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore v1.11.2 : Onglets invisibles corrigés</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-2-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-2-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>Les sous-onglets de Nettoyage et Explorer s'affichaient en texte blanc sur fond blanc, confirmé par une capture d'écran et corrigé.</description>
+    </item>
+    <item>
       <title>Meilleures alternatives gratuites à CCleaner en 2026</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/best-ccleaner-alternatives.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/best-ccleaner-alternatives.html</guid>

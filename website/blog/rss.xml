@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore v1.11.2: Invisible Tabs Fixed</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-2-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-2-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>The Cleanup and Explore sub-tabs were rendering as white text on a white background, confirmed by a screenshot and fixed.</description>
+    </item>
+    <item>
       <title>Best Free CCleaner Alternatives in 2026</title>
       <link>https://jeremstyke.github.io/purgecore/blog/best-ccleaner-alternatives.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/best-ccleaner-alternatives.html</guid>
