@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore v1.11.1 : Un risque de blocage latent corrigé</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-1-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-1-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>Un piège classique .NET dans Santé de la batterie et Vider le cache DNS, trouvé lors d'un audit, corrigé avant qu'il ne pose problème.</description>
+    </item>
+    <item>
       <title>PurgeCore v1.11.0 : Santé de la batterie</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-0-release-notes.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-0-release-notes.html</guid>

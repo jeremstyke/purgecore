@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore v1.11.1: A Latent Freeze Risk Fixed</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-1-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-1-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>A known .NET deadlock pitfall in Battery Health and Flush DNS, found during a code audit, fixed before it ever caused a problem.</description>
+    </item>
+    <item>
       <title>PurgeCore v1.11.0: Battery Health</title>
       <link>https://jeremstyke.github.io/purgecore/blog/v1-11-0-release-notes.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-0-release-notes.html</guid>
