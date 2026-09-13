@@ -280,6 +280,8 @@ Bob revisited Android after already agreeing earlier that a straight port of Pur
 
 **Bob's own assessment, which stands**: this is effectively a second product to build from scratch (new codebase, new platform, new store to manage), not a Windows PurgeCore feature. Precondition is the same as everything else on this list: PurgeCore Windows needs a real established user base first. Logged as a real idea worth revisiting later, unlike the other Android ideas already ruled out.
 
+**Monetization for whenever this gets built**: AdMob, confirmed by Bob (2026-09-13) as the intended approach. Unlike everything explored for the Windows app, AdMob is a genuinely good fit here, it's built specifically for mobile apps (the actual use case), no DAU-style entry wall like AppLixir, no traffic minimum like Ezoic. The standard, sensible choice for a free Android utility app.
+
 ## Voluntary support option (Patreon/Tipeee/Store), compared, deferred (2026-09-12)
 
 Bob explored a recurring voluntary support option (not a paywalled feature, same spirit as the existing "offer a coffee" Gumroad link) at 1.99 EUR/month across three platforms. Verified numbers, all at 1.99 EUR:
