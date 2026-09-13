@@ -365,8 +365,8 @@ section { padding: 64px 0; }
 /* ---------- Download band ---------- */
 
 .download-band {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #DBEAFE 0%, #EDE9FE 100%);
+  border: none;
   border-radius: 16px;
   padding: 48px 40px;
   text-align: center;
@@ -375,6 +375,8 @@ section { padding: 64px 0; }
 .download-band h2 {
   font-size: 26px;
   margin: 0 0 10px;
+  border-left: none !important;
+  padding-left: 0 !important;
 }
 
 .download-band p {
@@ -473,6 +475,11 @@ footer .disclosure {
   font-weight: 700;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
+  background: linear-gradient(90deg, var(--accent), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .content-page .page-lead {
@@ -485,6 +492,8 @@ footer .disclosure {
   font-size: 21px;
   font-weight: 700;
   margin: 40px 0 12px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent);
 }
 
 .content-page p {
@@ -552,14 +561,16 @@ footer .disclosure {
 }
 
 .cta-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #DBEAFE, #F5F3FF);
+  border: none;
+  border-left: 5px solid var(--accent);
   border-radius: 14px;
   padding: 24px;
   margin: 32px 0;
 }
 
-.cta-box p { margin: 0 0 14px; }
+.cta-box p { margin: 0 0 14px; font-weight: 500; }
+.cta-box p:last-child { margin-bottom: 0; }
 
 /* ---------- Blog cards (prettier than a plain hairline list) ---------- */
 
