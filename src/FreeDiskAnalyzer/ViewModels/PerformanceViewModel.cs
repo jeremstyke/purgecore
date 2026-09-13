@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -12,6 +13,7 @@ public sealed partial class PerformanceViewModel : ObservableObject
     private readonly IRamOptimizer _ramOptimizer;
     private readonly IStartupManager _startupManager;
     private readonly IDnsCacheService _dnsCacheService;
+    private readonly IBatteryReportService _batteryReportService;
 
     [ObservableProperty]
     private bool isRunning;
@@ -31,6 +33,15 @@ public sealed partial class PerformanceViewModel : ObservableObject
     [ObservableProperty]
     private string dnsResultSummary = string.Empty;
 
+    [ObservableProperty]
+    private bool hasBattery;
+
+    [ObservableProperty]
+    private bool isGeneratingBatteryReport;
+
+    [ObservableProperty]
+    private bool batteryReportFailed;
+
     public ObservableCollection<StartupItemViewModel> StartupItems { get; } = new();
 
     [ObservableProperty]
@@ -39,13 +50,41 @@ public sealed partial class PerformanceViewModel : ObservableObject
     [ObservableProperty]
     private bool hasNoStartupItems;
 
-    public PerformanceViewModel(IRamOptimizer ramOptimizer, IStartupManager startupManager, IDnsCacheService dnsCacheService)
+    public PerformanceViewModel(IRamOptimizer ramOptimizer, IStartupManager startupManager, IDnsCacheService dnsCacheService, IBatteryReportService batteryReportService)
     {
         _ramOptimizer = ramOptimizer;
         _startupManager = startupManager;
         _dnsCacheService = dnsCacheService;
+        _batteryReportService = batteryReportService;
 
         _ = LoadStartupItemsAsync();
+        _ = CheckBatteryAsync();
+    }
+
+    private async Task CheckBatteryAsync() => HasBattery = await _batteryReportService.HasBatteryAsync();
+
+    [RelayCommand]
+    private async Task GenerateBatteryReportAsync()
+    {
+        IsGeneratingBatteryReport = true;
+        BatteryReportFailed = false;
+
+        try
+        {
+            var reportPath = await _batteryReportService.GenerateReportAsync();
+            if (reportPath is not null)
+            {
+                Process.Start(new ProcessStartInfo(reportPath) { UseShellExecute = true });
+            }
+            else
+            {
+                BatteryReportFailed = true;
+            }
+        }
+        finally
+        {
+            IsGeneratingBatteryReport = false;
+        }
     }
 
     [RelayCommand]

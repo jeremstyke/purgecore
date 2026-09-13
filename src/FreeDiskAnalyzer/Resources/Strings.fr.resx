@@ -125,6 +125,11 @@
   <data name="Performance_DnsFlushedSuccess" xml:space="preserve"><value>Cache DNS vidé.</value></data>
   <data name="Performance_DnsFlushedFailure" xml:space="preserve"><value>Impossible de vider le cache DNS. C'est inhabituel, réessayez ou redémarrez votre ordinateur.</value></data>
 
+  <data name="Performance_BatteryTitle" xml:space="preserve"><value>Santé de la batterie</value></data>
+  <data name="Performance_BatteryBody" xml:space="preserve"><value>Génère le rapport de batterie propre à Windows : capacité d'origine face à la capacité de charge maximale actuelle, et historique d'utilisation dans le temps. S'ouvre dans votre navigateur une fois prêt.</value></data>
+  <data name="Performance_GenerateBatteryReport" xml:space="preserve"><value>🔋 Générer le rapport de batterie</value></data>
+  <data name="Performance_BatteryReportFailed" xml:space="preserve"><value>Impossible de générer le rapport de batterie. Réessayez, ou lancez vous-même "powercfg /batteryreport" depuis une invite de commande.</value></data>
+
   <data name="Startup_Title" xml:space="preserve"><value>Programmes au démarrage</value></data>
   <data name="Startup_Body" xml:space="preserve"><value>Applications qui se lancent au démarrage de Windows. Désactiver n'en désinstalle aucune, ça arrête juste le lancement automatique, réactivable à tout moment. Seules les entrées de votre propre compte sont affichées, pas les entrées système partagées.</value></data>
   <data name="Startup_Remove" xml:space="preserve"><value>Supprimer</value></data>
