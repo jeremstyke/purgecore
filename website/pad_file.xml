@@ -31,9 +31,9 @@
 
 <Program_Info>
 <Program_Name>PurgeCore</Program_Name>
-<Program_Version>1.6.1</Program_Version>
+<Program_Version>1.10.1</Program_Version>
 <Program_Release_Month>09</Program_Release_Month>
-<Program_Release_Day>11</Program_Release_Day>
+<Program_Release_Day>12</Program_Release_Day>
 <Program_Release_Year>2026</Program_Release_Year>
 <Program_Cost_Dollars>0</Program_Cost_Dollars>
 <Program_Cost_Other_Code></Program_Cost_Other_Code>
@@ -53,12 +53,12 @@
 
 <Program_System_Requirements>Windows 10 or later, 64-bit (x64)</Program_System_Requirements>
 <Program_Language>ML</Program_Language>
-<Program_Change_Info>Browser cleanup fixes: progress indicators, accurate freed-space reporting, and interface polish with smoother animations.</Program_Change_Info>
+<Program_Change_Info>Uninstall programs feature, bold redesign with more color and animation, driver update reminders with plain explanations, DNS cache flush, Blog moved to its own tab, and several real bugs fixed (a Windows dialog interrupting cleanup on locked files, unstyled buttons, Startup Manager desync).</Program_Change_Info>
 
 <File_Info>
-<File_Size_Bytes>52083973</File_Size_Bytes>
-<File_Size_K>50863</File_Size_K>
-<File_Size_MB>49.66</File_Size_MB>
+<File_Size_Bytes>52365409</File_Size_Bytes>
+<File_Size_K>51138</File_Size_K>
+<File_Size_MB>49.94</File_Size_MB>
 </File_Info>
 
 <Expire_Info>
@@ -71,18 +71,18 @@
 
 <Program_Descriptions>
 <English>
-<Keywords>disk analyzer, disk cleaner, PC cleaner, duplicate finder, browser cleaner, free up disk space, CCleaner alternative, Windows cleanup, RAM optimizer, startup manager</Keywords>
+<Keywords>disk analyzer, disk cleaner, PC cleaner, duplicate finder, browser cleaner, free up disk space, CCleaner alternative, Windows cleanup, RAM optimizer, startup manager, program uninstaller</Keywords>
 <Char_Desc_45>Free disk analyzer and PC cleaner for Windows</Char_Desc_45>
 <Char_Desc_80>PurgeCore: a complete, 100% free PC cleaner and disk analyzer for Windows.</Char_Desc_80>
 <Char_Desc_250>PurgeCore is a complete, 100% free PC cleaner for Windows: disk space analysis, duplicate finder, browser cleanup (Chrome/Edge/Firefox), startup manager, RAM check, and safe deletion with a green/orange/red risk indicator on everything. Nothing is ever sent anywhere.</Char_Desc_250>
-<Char_Desc_450>PurgeCore is a complete, 100% free PC cleaner for Windows. It starts with disk space analysis (largest files and folders, storage breakdown by category), then adds duplicate detection, browser cleanup for Chrome/Edge/Firefox with a cookie whitelist, a startup program manager, a RAM check, and Temp/Recycle Bin cleanup. Every deletion goes to the Recycle Bin and shows a green/orange/red risk level before anything happens. No registry cleaner, no paid tier, no telemetry by default. A privacy-first alternative to CCleaner and similar tools.</Char_Desc_450>
+<Char_Desc_450>PurgeCore is a complete, 100% free PC cleaner for Windows. It starts with disk space analysis (largest files and folders, storage breakdown by category), then adds duplicate detection, browser cleanup for Chrome/Edge/Firefox with a cookie whitelist, program uninstaller, a startup program manager, a RAM check, DNS cache flush, and Temp/Recycle Bin cleanup. Every deletion goes to the Recycle Bin and shows a green/orange/red risk level before anything happens. No registry cleaner, no paid tier, no telemetry of any kind. A privacy-first alternative to CCleaner and similar tools.</Char_Desc_450>
 <Char_Desc_2000>PurgeCore is a complete, 100% free PC cleaner for Windows, built around one idea: show people what's actually using their storage first, then let them clean it up safely.
 
-The Dashboard gives a quick overview of drive usage and storage by category. The Explore section covers large files and folders, old files, and read-only driver info (with links to Windows Update and manufacturer sites, nothing downloaded automatically). The Cleanup section is where things actually change: a duplicate finder that matches files by content (not just name or size) and always keeps at least one copy, an empty folder finder, browser cleanup for Chrome, Edge, and Firefox (cache, cookies, history, with a cookie whitelist to stay signed in to chosen sites, bookmarks and passwords never touched), a Temp files and Recycle Bin cleaner, a RAM check that reports real before/after numbers instead of a promised gain, and a startup program manager that disables (reversibly) or removes items from Windows startup.
+The Dashboard gives a quick overview of drive usage and storage by category. The Explore section covers large files and folders, old files, and driver info that explains itself in plain language when clicked (with links to Windows Update and manufacturer sites, nothing downloaded automatically). The Cleanup section is where things actually change: a duplicate finder that matches files by content (not just name or size) and always keeps at least one copy, an empty folder finder, browser cleanup for Chrome, Edge, and Firefox (cache, cookies, history, with a cookie whitelist to stay signed in to chosen sites, bookmarks and passwords never touched), a program uninstaller that lists installed software largest first and removes it using each program's own official uninstaller, a Temp files and Recycle Bin cleaner, a DNS cache flush, a RAM check that reports real before/after numbers instead of a promised gain, and a startup program manager that disables (reversibly) or removes items from Windows startup.
 
 Every deletion in the app goes to the Recycle Bin, never permanent, and every deletable item shows a green/orange/red risk indicator plus a confirmation with the exact size before anything happens. There is deliberately no registry cleaner: on modern Windows it has little measurable benefit and a real risk of breaking something a program still needs.
 
-PurgeCore has one tier: everything, free, forever. No premium upgrade, no ads inside the app, no telemetry unless explicitly opted in. The source code is public on GitHub. It's built as an alternative to CCleaner, BleachBit, and WinDirStat for people who want disk analysis and cleanup in one place without a registry cleaner or upsell prompts.</Char_Desc_2000>
+PurgeCore has one tier: everything, free, forever. No premium upgrade, no ads inside the app, no telemetry of any kind. The source code is public on GitHub. It's built as an alternative to CCleaner, BleachBit, and WinDirStat for people who want disk analysis and cleanup in one place without a registry cleaner or upsell prompts.</Char_Desc_2000>
 </English>
 </Program_Descriptions>
 

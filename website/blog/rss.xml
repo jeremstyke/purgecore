@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore Now Has a PAD File</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/pad-file-available.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/pad-file-available.html</guid>
+      <category>Announcement</category>
+      <description>PurgeCore publishes a PAD (Portable Application Description) file, so software directories can list it with accurate, up-to-date details automatically.</description>
+    </item>
+    <item>
       <title>PurgeCore v1.10.0: No More Popups Mid-Cleanup</title>
       <link>https://jeremstyke.github.io/purgecore/blog/v1-10-0-release-notes.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/v1-10-0-release-notes.html</guid>
