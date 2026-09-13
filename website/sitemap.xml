@@ -191,6 +191,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jeremstyke.github.io/purgecore/blog/best-ccleaner-alternatives.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/fr/blog/best-ccleaner-alternatives.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-ccleaner.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
