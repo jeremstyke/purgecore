@@ -36,6 +36,9 @@
             <DataTemplate DataType="{x:Type vm:CleanupViewModel}">
                 <views:CleanupView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:BatteryViewModel}">
+                <views:BatteryView/>
+            </DataTemplate>
             <DataTemplate DataType="{x:Type vm:OldFilesViewModel}">
                 <views:OldFilesView/>
             </DataTemplate>

@@ -6,6 +6,7 @@ public enum NavKey
     Analyze,
     Explore,
     Cleanup,
+    Battery,
     Blog,
     Settings,
     Privacy,

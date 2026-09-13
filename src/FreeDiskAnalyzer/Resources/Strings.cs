@@ -21,6 +21,7 @@ public static class Strings
     public static string Nav_Analyze => Get(nameof(Nav_Analyze));
     public static string Nav_Explore => Get(nameof(Nav_Explore));
     public static string Nav_Cleanup => Get(nameof(Nav_Cleanup));
+    public static string Nav_Battery => Get(nameof(Nav_Battery));
     public static string Nav_Blog => Get(nameof(Nav_Blog));
     public static string Nav_Settings => Get(nameof(Nav_Settings));
     public static string Nav_Privacy => Get(nameof(Nav_Privacy));
@@ -112,6 +113,7 @@ public static class Strings
     public static string Performance_BatteryBody => Get(nameof(Performance_BatteryBody));
     public static string Performance_GenerateBatteryReport => Get(nameof(Performance_GenerateBatteryReport));
     public static string Performance_BatteryReportFailed => Get(nameof(Performance_BatteryReportFailed));
+    public static string Performance_BatteryNoBattery => Get(nameof(Performance_BatteryNoBattery));
 
     public static string Startup_Title => Get(nameof(Startup_Title));
     public static string Startup_Body => Get(nameof(Startup_Body));

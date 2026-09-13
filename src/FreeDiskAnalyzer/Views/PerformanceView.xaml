@@ -38,25 +38,6 @@
                 </StackPanel>
             </Border>
 
-            <Border Style="{StaticResource CardStyle}" Margin="0,0,0,20"
-                    Visibility="{Binding HasBattery, Converter={StaticResource BoolToVis}}">
-                <StackPanel>
-                    <TextBlock Text="{x:Static res:Strings.Performance_BatteryTitle}" FontWeight="SemiBold" FontSize="16"
-                               Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
-                    <TextBlock Text="{x:Static res:Strings.Performance_BatteryBody}" TextWrapping="Wrap"
-                               Style="{StaticResource BodyTextStyle}" Margin="0,0,0,16"/>
-                    <Button Content="{x:Static res:Strings.Performance_GenerateBatteryReport}" Style="{StaticResource PrimaryButtonStyle}"
-                            HorizontalAlignment="Left" Command="{Binding GenerateBatteryReportCommand}"/>
-                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0"
-                                Visibility="{Binding IsGeneratingBatteryReport, Converter={StaticResource BoolToVis}}">
-                        <local:LoadingDotsView Margin="0,0,8,0"/>
-                        <TextBlock Text="{x:Static res:Strings.Performance_Running}" Style="{StaticResource CaptionTextStyle}"/>
-                    </StackPanel>
-                    <TextBlock Text="{x:Static res:Strings.Performance_BatteryReportFailed}" Style="{StaticResource BodyTextStyle}" TextWrapping="Wrap"
-                               Margin="0,12,0,0" Visibility="{Binding BatteryReportFailed, Converter={StaticResource BoolToVis}}"/>
-                </StackPanel>
-            </Border>
-
             <TextBlock Text="{x:Static res:Strings.Startup_Title}" FontWeight="SemiBold" FontSize="16"
                        Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
             <TextBlock Text="{x:Static res:Strings.Startup_Body}" TextWrapping="Wrap"
