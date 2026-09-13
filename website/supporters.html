@@ -73,8 +73,8 @@
       ul.style.cssText = 'display:flex; flex-wrap:wrap; gap:12px;';
       data.supporters.forEach(function (name) {
         var chip = document.createElement('span');
-        chip.textContent = name;
-        chip.style.cssText = 'background:var(--surface); border:1px solid var(--border); border-radius:999px; padding:8px 16px; font-weight:600;';
+        chip.textContent = '💜 ' + name;
+        chip.style.cssText = 'background:linear-gradient(135deg, #DBEAFE, #EDE9FE); border:1px solid var(--accent); color:var(--accent-deep); border-radius:999px; padding:10px 18px; font-weight:700; font-size:15px;';
         ul.appendChild(chip);
       });
       list.innerHTML = '';
