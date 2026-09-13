@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore a maintenant un fichier PAD</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/pad-file-available.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/pad-file-available.html</guid>
+      <category>Annonce</category>
+      <description>PurgeCore publie un fichier PAD (Portable Application Description), pour que les annuaires de logiciels puissent le référencer automatiquement avec des informations exactes et à jour.</description>
+    </item>
+    <item>
       <title>Free Disk Analyzer devient PurgeCore</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/renamed-to-purgecore.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/renamed-to-purgecore.html</guid>
