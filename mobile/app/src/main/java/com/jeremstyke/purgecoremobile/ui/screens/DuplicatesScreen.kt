@@ -113,67 +113,66 @@ fun DuplicatesScreen() {
             subtitle = stringResource(R.string.duplicates_body)
         )
 
-        Column(modifier = Modifier.fillMaxSize().padding(24.dp)) content@ {
-        Spacer(Modifier.height(4.dp))
+        Column(modifier = Modifier.fillMaxSize().padding(24.dp)) {
+            Spacer(Modifier.height(4.dp))
 
-        if (!hasPermission) {
-            Card(shape = RoundedCornerShape(16.dp)) {
-                Column(Modifier.padding(20.dp)) {
-                    Text(stringResource(R.string.duplicates_permission_rationale))
-                    Spacer(Modifier.height(16.dp))
-                    Button(onClick = { permissionLauncher.launch(mediaPermissions()) }) {
-                        Text(stringResource(R.string.duplicates_grant_permission))
+            if (!hasPermission) {
+                Card(shape = RoundedCornerShape(16.dp)) {
+                    Column(Modifier.padding(20.dp)) {
+                        Text(stringResource(R.string.duplicates_permission_rationale))
+                        Spacer(Modifier.height(16.dp))
+                        Button(onClick = { permissionLauncher.launch(mediaPermissions()) }) {
+                            Text(stringResource(R.string.duplicates_grant_permission))
+                        }
                     }
                 }
-            }
-            return@content
-        }
-
-        Button(onClick = { runScan() }, enabled = !isScanning) {
-            Text(stringResource(R.string.duplicates_scan))
-        }
-        Spacer(Modifier.height(16.dp))
-
-        when {
-            isScanning -> {
-                Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        CircularProgressIndicator()
-                        Spacer(Modifier.height(12.dp))
-                        Text(stringResource(R.string.duplicates_scanning))
-                    }
+            } else {
+                Button(onClick = { runScan() }, enabled = !isScanning) {
+                    Text(stringResource(R.string.duplicates_scan))
                 }
-            }
-            hasScannedOnce && groups.isEmpty() -> {
-                Text(stringResource(R.string.duplicates_none_found))
-            }
-            groups.isNotEmpty() -> {
-                LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    items(groups) { group ->
-                        Card(shape = RoundedCornerShape(16.dp)) {
-                            Column(Modifier.padding(16.dp)) {
-                                Text(
-                                    text = String.format(
-                                        stringResource(R.string.duplicates_group_count),
-                                        group.items.size
-                                    ),
-                                    fontWeight = FontWeight.SemiBold
-                                )
-                                Text(
-                                    text = "${formatBytes(group.reclaimableBytes)} reclaimable",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
+                Spacer(Modifier.height(16.dp))
+
+                when {
+                    isScanning -> {
+                        Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                CircularProgressIndicator()
                                 Spacer(Modifier.height(12.dp))
-                                OutlinedButton(onClick = { deleteExtraCopies(group) }) {
-                                    Text(stringResource(R.string.duplicates_delete_extra))
+                                Text(stringResource(R.string.duplicates_scanning))
+                            }
+                        }
+                    }
+                    hasScannedOnce && groups.isEmpty() -> {
+                        Text(stringResource(R.string.duplicates_none_found))
+                    }
+                    groups.isNotEmpty() -> {
+                        LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                            items(groups) { group ->
+                                Card(shape = RoundedCornerShape(16.dp)) {
+                                    Column(Modifier.padding(16.dp)) {
+                                        Text(
+                                            text = String.format(
+                                                stringResource(R.string.duplicates_group_count),
+                                                group.items.size
+                                            ),
+                                            fontWeight = FontWeight.SemiBold
+                                        )
+                                        Text(
+                                            text = "${formatBytes(group.reclaimableBytes)} reclaimable",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                        Spacer(Modifier.height(12.dp))
+                                        OutlinedButton(onClick = { deleteExtraCopies(group) }) {
+                                            Text(stringResource(R.string.duplicates_delete_extra))
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
         }
     }
 }
