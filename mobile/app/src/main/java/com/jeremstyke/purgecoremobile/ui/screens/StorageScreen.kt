@@ -1,5 +1,6 @@
 package com.jeremstyke.purgecoremobile.ui.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -7,7 +8,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.StorageInfo
@@ -31,6 +34,7 @@ fun formatBytes(bytes: Long): String {
 @Composable
 fun StorageScreen() {
     var storageInfo by remember { mutableStateOf<StorageInfo?>(null) }
+    val uriHandler = LocalUriHandler.current
 
     LaunchedEffect(Unit) {
         storageInfo = StorageRepository.readStorageInfo()
@@ -71,6 +75,17 @@ fun StorageScreen() {
                 CircularProgressIndicator()
             }
         }
+            Spacer(Modifier.weight(1f))
+            Text(
+                text = stringResource(R.string.visit_website),
+                style = MaterialTheme.typography.bodySmall,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp)
+                    .clickable { uriHandler.openUri("https://jeremstyke.github.io/purgecore/mobile.html") },
+            )
         }
     }
 }
