@@ -4,6 +4,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.isSystemInDarkTheme
 
@@ -15,6 +16,8 @@ val Teal = Color(0xFF0D9488)
 val Violet = Color(0xFF7C3AED)
 val Amber = Color(0xFFD97706)
 val Rose = Color(0xFFE11D48)
+
+val BrandGradient = Brush.linearGradient(listOf(Accent, Violet, Teal))
 
 private val LightColors = lightColorScheme(
     primary = Accent,
