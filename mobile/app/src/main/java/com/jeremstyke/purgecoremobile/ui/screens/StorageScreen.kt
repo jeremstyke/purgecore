@@ -8,11 +8,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
+import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import java.text.CharacterIterator
 import java.text.StringCharacterIterator
 
@@ -36,19 +36,15 @@ fun StorageScreen() {
         storageInfo = StorageRepository.readStorageInfo()
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp)
-    ) {
-        Text(
-            text = stringResource(R.string.storage_title),
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold
-        )
-        Spacer(Modifier.height(20.dp))
+    Column(modifier = Modifier.fillMaxSize()) {
+        BrandHeader(title = stringResource(R.string.storage_title))
 
-        storageInfo?.let { info ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp)
+        ) {
+            storageInfo?.let { info ->
             Card(shape = RoundedCornerShape(16.dp)) {
                 Column(Modifier.padding(20.dp)) {
                     LinearProgressIndicator(
@@ -74,6 +70,7 @@ fun StorageScreen() {
             Box(Modifier.fillMaxWidth().padding(40.dp), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
+        }
         }
     }
 }
