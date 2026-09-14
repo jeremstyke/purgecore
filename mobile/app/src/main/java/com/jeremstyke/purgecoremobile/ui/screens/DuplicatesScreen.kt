@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.DuplicateFinder
 import com.jeremstyke.purgecoremobile.data.DuplicateGroup
+import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import kotlinx.coroutines.launch
 
 private fun mediaPermissions(): Array<String> =
@@ -106,19 +107,14 @@ fun DuplicatesScreen() {
         }
     }
 
-    Column(modifier = Modifier.fillMaxSize().padding(24.dp)) {
-        Text(
-            text = stringResource(R.string.duplicates_title),
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold
+    Column(modifier = Modifier.fillMaxSize()) {
+        BrandHeader(
+            title = stringResource(R.string.duplicates_title),
+            subtitle = stringResource(R.string.duplicates_body)
         )
-        Spacer(Modifier.height(8.dp))
-        Text(
-            text = stringResource(R.string.duplicates_body),
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(Modifier.height(20.dp))
+
+        content@ Column(modifier = Modifier.fillMaxSize().padding(24.dp)) {
+        Spacer(Modifier.height(4.dp))
 
         if (!hasPermission) {
             Card(shape = RoundedCornerShape(16.dp)) {
@@ -130,7 +126,7 @@ fun DuplicatesScreen() {
                     }
                 }
             }
-            return@Column
+            return@content
         }
 
         Button(onClick = { runScan() }, enabled = !isScanning) {
@@ -177,6 +173,7 @@ fun DuplicatesScreen() {
                     }
                 }
             }
+        }
         }
     }
 }
