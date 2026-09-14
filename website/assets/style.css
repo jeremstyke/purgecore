@@ -613,6 +613,7 @@ footer .disclosure {
 .blog-tag-guide { background: var(--teal); }
 .blog-tag-comparison { background: var(--violet); }
 .blog-tag-announcement { background: var(--amber); }
+.blog-tag-mobile { background: #E11D48; }
 
 .blog-card h3 {
   font-size: 19px;
@@ -669,3 +670,4 @@ footer .disclosure {
 .article-tag-guide { background: var(--teal); }
 .article-tag-comparison { background: var(--violet); }
 .article-tag-announcement { background: var(--amber); }
+.article-tag-mobile { background: #E11D48; }

@@ -81,6 +81,26 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://jeremstyke.github.io/purgecore/blog/introducing-purgecore-mobile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/fr/blog/introducing-purgecore-mobile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-funding.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-funding.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jeremstyke.github.io/purgecore/blog/v1-6-0-release-notes.html</loc>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
