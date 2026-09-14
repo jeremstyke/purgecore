@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore Mobile - Stockage et doublons photo pour Android</title>
+<meta name="description" content="PurgeCore Mobile : une app compagnon Android gratuite. Voyez votre stockage en un coup d'œil et trouvez les photos et vidéos en double, tout sur votre appareil, rien n'est envoyé nulle part.">
+<meta property="og:title" content="PurgeCore Mobile pour Android">
+<meta property="og:description" content="Une app compagnon Android gratuite : aperçu du stockage et détecteur de photos en double, tout sur votre appareil.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/mobile.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/mobile.html">
+<link rel="icon" type="image/png" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#features">Fonctionnalités</a>
+      <a href="mobile.html">Mobile</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="about.html">À propos</a>
+      <a href="blog/">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../mobile.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="text-align:center;">
+    <div style="flex:1; width:100%;">
+      <span class="beta-badge" style="margin-bottom:16px; display:inline-block;">NOUVEAU</span>
+      <h1>PurgeCore Mobile</h1>
+      <p class="lead" style="margin-left:auto; margin-right:auto;">Une app compagnon Android gratuite. Voyez votre stockage en un coup d'œil, et trouvez les photos et vidéos en double qui prennent une place que vous ne saviez pas pouvoir récupérer.</p>
+      <div style="margin-top:24px;">
+        <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/tag/mobile-v1.0.0">Télécharger l'APK</a>
+        <span class="btn-note" style="display:block; margin-top:10px; color:var(--ink-muted); font-size:13px;">Gratuit, v1.0.0, pas encore sur Google Play</span>
+      </div>
+      <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas l'app Windows ? <a href="index.html">PurgeCore pour Windows est ici</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Ce que ça fait</h2>
+    <p class="section-sub">Deux choses, bien faites, plutôt qu'une longue liste faite à moitié.</p>
+    <div class="features-list">
+      <div class="feature">
+        <h3>Le stockage en un coup d'œil</h3>
+        <p>Une vue simple et honnête de l'espace utilisé et de l'espace libre sur votre appareil, sans fouiller dans les menus de paramètres d'Android.</p>
+      </div>
+      <div class="feature">
+        <h3>Photos et vidéos en double</h3>
+        <p>Trouve les photos et vidéos au contenu identique, pas seulement aux noms similaires, donc une copie renommée est toujours détectée. Garde toujours au moins une copie de chaque fichier, un groupe ne peut jamais être effacé entièrement en une seule action.</p>
+      </div>
+      <div class="feature">
+        <h3>Une suppression sécurisée</h3>
+        <p>Supprimer des doublons passe par la boîte de dialogue de confirmation propre à Android, la même que n'importe quelle app utilise pour supprimer vos médias, rien ne se passe silencieusement.</p>
+      </div>
+      <div class="feature">
+        <h3>Privé par conception</h3>
+        <p>Vos photos et leur contenu ne quittent jamais votre appareil. Rien n'est analysé, envoyé ou traité ailleurs que localement, sur le téléphone dans votre main.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="band-dark">
+  <div class="wrap">
+    <h2 class="section-heading">Construit pour rester en dehors de vos données</h2>
+    <p class="section-sub">Le même principe que PurgeCore pour Windows, juste sur une autre plateforme.</p>
+    <div class="privacy-points">
+      <div>
+        <h4>Reste local</h4>
+        <p>La détection de doublons se fait entièrement sur votre appareil. Rien sur vos photos n'est jamais envoyé où que ce soit.</p>
+      </div>
+      <div>
+        <h4>Permissions minimales</h4>
+        <p>Demande uniquement l'accès aux photos et vidéos, et seulement à l'ouverture du détecteur de doublons. Aucune permission pour lire vos contacts, votre position, ou quoi que ce soit d'autre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="free-forever">
+  <div class="wrap" style="text-align:center;">
+    <h2>Gratuit, avec des publicités pour soutenir le développement</h2>
+    <p>PurgeCore Mobile est gratuit à utiliser. Le développement est soutenu par des publicités affichées dans l'app, le même modèle honnête que la plupart des apps Android gratuites utilisent, clairement séparé de l'outil lui-même.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-item">
+      <h3>C'est la même app que PurgeCore pour Windows ?</h3>
+      <p>Non, c'est une app séparée construite pour ce dont un téléphone a réellement besoin : un aperçu du stockage et un détecteur de photos en double, plutôt que d'essayer de forcer des fonctionnalités façon Windows (registre, gestionnaire de démarrage) sur Android, où elles ne s'appliquent pas.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Pourquoi ce n'est pas encore sur Google Play ?</h3>
+      <p>C'est tout nouveau. L'APK est disponible en installation directe pour l'instant, une soumission au Play Store pourra suivre une fois qu'elle aura eu plus d'usage réel.</p>
+    </div>
+    <div class="faq-item">
+      <h3>L'installation va afficher un avertissement ?</h3>
+      <p>Comme elle n'est pas encore distribuée via Google Play, Android va probablement demander de confirmer l'installation depuis une source inconnue la première fois. Le code source est public sur GitHub, et chaque version est publiée avec une empreinte SHA-256 vérifiable.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div style="margin-top:6px; font-size:13px;"><a href="privacy.html" style="color:var(--ink-muted);">Politique de confidentialité</a> &middot; <a href="terms.html" style="color:var(--ink-muted);">Conditions d'utilisation</a></div>
+  </div>
+</footer>
+
+<script src="../assets/animations.js" defer></script>
+</body>
+</html>

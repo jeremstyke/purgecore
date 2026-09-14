@@ -13,6 +13,8 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
 
 🇫🇷 [Lire en français](README.fr.md)
 
+> **Two products live in this repository:** **PurgeCore PC** (Windows, this README) and **[PurgeCore Mobile](https://jeremstyke.github.io/purgecore/mobile.html)** (Android, storage overview and duplicate photo finder). Separate apps, separate code (`src/` vs `mobile/`), separate release tags (`v*` vs `mobile-v*`).
+
 <p align="center">
   <a href="https://jeremstyke.github.io/purgecore/">
     <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Website-2563EB?style=for-the-badge" alt="Website" />

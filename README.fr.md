@@ -12,6 +12,8 @@ Analyse de disque, doublons, nettoyage navigateurs et PC, gestion démarrage et 
 
 🇬🇧 [Read in English](README.md)
 
+> **Deux produits vivent dans ce dépôt :** **PurgeCore PC** (Windows, ce README) et **[PurgeCore Mobile](https://jeremstyke.github.io/purgecore/fr/mobile.html)** (Android, aperçu du stockage et détecteur de photos en double). Deux apps séparées, deux codes séparés (`src/` vs `mobile/`), deux préfixes de tags de release séparés (`v*` vs `mobile-v*`).
+
 <p align="center">
   <a href="https://jeremstyke.github.io/purgecore/fr/">
     <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Site%20web-2563EB?style=for-the-badge" alt="Site web" />

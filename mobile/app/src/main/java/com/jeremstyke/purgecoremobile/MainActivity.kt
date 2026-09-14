@@ -3,6 +3,7 @@ package com.jeremstyke.purgecoremobile
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ContentCopy
@@ -15,6 +16,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.google.android.gms.ads.MobileAds
+import com.jeremstyke.purgecoremobile.ui.components.BannerAd
 import com.jeremstyke.purgecoremobile.ui.screens.DuplicatesScreen
 import com.jeremstyke.purgecoremobile.ui.screens.StorageScreen
 import com.jeremstyke.purgecoremobile.ui.theme.PurgeCoreMobileTheme
@@ -29,6 +32,7 @@ private val destinations = listOf(Destination.Storage, Destination.Duplicates)
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MobileAds.initialize(this)
         setContent {
             PurgeCoreMobileTheme {
                 Surface {
@@ -44,7 +48,15 @@ private fun AppRoot() {
     val navController = rememberNavController()
 
     Scaffold(
-        bottomBar = { AppBottomBar(navController) }
+        bottomBar = {
+            Column {
+                // Shown once here rather than inside each screen, so it
+                // stays put across navigation instead of reloading an ad
+                // every time someone switches tabs.
+                BannerAd()
+                AppBottomBar(navController)
+            }
+        }
     ) { innerPadding ->
         NavHost(
             navController = navController,
