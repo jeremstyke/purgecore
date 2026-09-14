@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore v1.1.0 : Un nettoyage qui nettoie vraiment</title>
+<meta name="description" content="La v1.1.0 de PurgeCore est la première version qui peut réellement supprimer des fichiers, avec de vrais garde-fous.">
+<meta property="og:title" content="PurgeCore v1.1.0 : Un nettoyage qui nettoie vraiment">
+<meta property="og:description" content="La v1.1.0 de PurgeCore est la première version qui peut réellement supprimer des fichiers, avec de vrais garde-fous.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/v1-1-0-release-notes.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/v1-1-0-release-notes.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/v1-1-0-release-notes.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag">Release notes</span>
+  </div>
+  <h1>PurgeCore v1.1.0 : Un nettoyage qui nettoie vraiment</h1>
+  <p class="article-meta">2026</p>
+
+  <p>Chaque version précédente pouvait montrer ce qui utilisait votre espace. La v1.1.0 est la première version qui peut réellement agir dessus, et elle repose sur une règle : rien n'est supprimé sans votre accord, et rien d'important n'est touché par accident.</p>
+
+  <h2>De vraies suppressions, avec de vrais garde-fous</h2>
+  <p>Deux niveaux de sécurité s'appliquent à chaque suppression dans l'application, partout : elle passe toujours par la Corbeille, jamais de suppression définitive, et il est strictement impossible de toucher quoi que ce soit à l'intérieur de Windows ou de Program Files, peu importe ce qui a déclenché l'action. En plus de ça, une confirmation montre toujours exactement ce qui va être supprimé et approximativement combien d'espace ça libère, avant que quoi que ce soit ne se passe.</p>
+
+  <h2>Nouveau : supprimer les doublons et les dossiers vides</h2>
+  <p>Les outils Doublons et Dossiers vides (déplacés dans la nouvelle séparation Explorer/Nettoyage, détaillée plus bas) peuvent désormais nettoyer ce qu'ils trouvent. Doublons garde toujours au moins une copie de chaque fichier, un groupe entier ne peut jamais être effacé en un clic. Les dossiers vides vont directement à la Corbeille.</p>
+
+  <h2>Nouveau : nettoyage navigateur intégré</h2>
+  <p>Un nouvel onglet Navigateurs efface le cache, les cookies et l'historique pour Chrome, Edge et Firefox. Les favoris et mots de passe enregistrés ne sont jamais touchés, et pour Firefox spécifiquement, l'historique est volontairement laissé intact puisqu'il est stocké dans la même base de données que les favoris, trop facile de se tromper. Une liste blanche de cookies permet d'indiquer les domaines où rester connecté (un par ligne), le reste est effacé normalement.</p>
+
+  <h2>Nouveau : nettoyage du PC et contrôle RAM</h2>
+  <p>Un onglet Système vide votre dossier Temp et peut vider la Corbeille, avec un avertissement supplémentaire spécifiquement pour la Corbeille puisque cette étape-là est vraiment définitive. Un onglet Performance demande à Windows de récupérer la mémoire inutilisée et affiche les vrais chiffres avant/après plutôt qu'un gain promis, sur les versions récentes de Windows l'effet réel de ce type d'action est souvent plus faible que ce que les outils "nettoyeur de RAM" laissent entendre.</p>
+
+  <h2>Nouveau : indicateurs de risque partout</h2>
+  <p>Chaque élément supprimable affiche désormais un petit point vert, orange ou rouge. Vert signifie qu'aucune perte significative n'a lieu (un dossier vide, une copie en double, un cache navigateur régénérable). Orange signifie un désagrément mineur (déconnexion des sites). Rouge signifie quelque chose que vous voudriez peut-être garder (historique de navigation).</p>
+
+  <h2>Réorganisé : Explorer vs Nettoyage</h2>
+  <p>Fichiers volumineux, Dossiers et Anciens fichiers sont passés dans un nouvel onglet Explorer, navigation en lecture seule, rien là-dedans ne supprime quoi que ce soit. Nettoyage ne contient désormais que des outils capables de changer ou supprimer quelque chose : Doublons, Dossiers vides, Performance, Navigateurs et Système. La sidebar est plus courte qu'avant, et cette séparation rend évident en un coup d'œil quel onglet est sûr à explorer et lequel demande une confirmation avant d'agir.</p>
+
+  <h2>Également dans cette version</h2>
+  <ul>
+    <li>Export d'un rapport de scan en CSV</li>
+    <li>Notifications de mise à jour intégrées avec téléchargement et installation en un clic</li>
+    <li>Derniers articles du blog affichés sur le Tableau de bord</li>
+  </ul>
+
+  <div class="cta-box">
+    <p>Mise à jour depuis une version antérieure ? L'installeur la détecte, ferme l'application en cours d'exécution, installe par-dessus, et la rouvre automatiquement, pas besoin de désinstaller d'abord.</p>
+  </div>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger v1.1.0</h2>
+    <p>Gratuit pour toujours, pas de compte, pas d'essai.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Setup.exe">Télécharger pour Windows</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas encore de certificat de signature de code commercial, donc Windows peut afficher un bref avertissement "éditeur inconnu" au premier lancement. Le code source est public sur GitHub, et chaque version est publiée avec une empreinte SHA-256 vérifiable.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>

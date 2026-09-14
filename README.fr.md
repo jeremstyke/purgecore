@@ -46,6 +46,7 @@ Analyse de disque, doublons, nettoyage navigateurs et PC, gestion démarrage et 
 - Libération de RAM (vrais chiffres avant/après, pas un gain promis)
 - Désinstaller des programmes (du plus gros au plus petit, recherche, utilise le désinstalleur officiel de chaque programme)
 - Vider le cache DNS (un clic, aucun fichier ni registre touché)
+- Rapport de santé de la batterie (diagnostic propre à Windows, portables uniquement)
 - Gestionnaire de démarrage (activer/désactiver/supprimer les apps au démarrage de Windows, compte utilisateur uniquement, pas besoin de droits admin)
 - Infos pilotes (lecture seule) : pilotes installés, signale ceux de 3+ ans, liens vers Windows Update et les sites fabricants, ne télécharge ni n'installe jamais rien lui-même
 - Notifications de mise à jour dans l'app, avec téléchargement et installation en un clic

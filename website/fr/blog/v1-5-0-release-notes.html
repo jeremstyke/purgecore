@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore v1.5.0 : Corrections du nettoyage navigateur</title>
+<meta name="description" content="La v1.5.0 de PurgeCore corrige trois problèmes réels dans le nettoyage navigateur, trouvés lors d'une revue de code.">
+<meta property="og:title" content="PurgeCore v1.5.0 : Corrections du nettoyage navigateur">
+<meta property="og:description" content="La v1.5.0 de PurgeCore corrige trois problèmes réels dans le nettoyage navigateur, trouvés lors d'une revue de code.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/v1-5-0-release-notes.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/v1-5-0-release-notes.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/v1-5-0-release-notes.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag">Release notes</span>
+  </div>
+  <h1>PurgeCore v1.5.0 : Corrections du nettoyage navigateur</h1>
+  <p class="article-meta">2026</p>
+
+  <p>La v1.5.0 est une version de correction ciblée sur le nettoyage navigateur : trois problèmes réels trouvés lors d'une revue de code, aucun n'était dangereux, mais tous rendaient la fonctionnalité moins fiable qu'elle ne devrait l'être.</p>
+
+  <h2>Corrigé : aucun retour visuel pendant le scan ou le nettoyage</h2>
+  <p>Cliquer sur Rescanner ou Nettoyer la sélection ne changeait rien de visible à l'écran pendant que le travail se faisait en arrière-plan. Vider un gros cache navigateur peut prendre un certain temps, d'autant plus que les fichiers supprimés vont à la Corbeille plutôt que d'être retirés directement. Sans indicateur, ça donnait l'impression que l'application s'était figée. Il y a désormais un message "Analyse en cours..." et "Nettoyage en cours, ça peut prendre du temps pour les gros caches..." pendant chaque opération.</p>
+
+  <h2>Corrigé : possibilité de lancer des scans qui se chevauchent</h2>
+  <p>Rien n'empêchait auparavant un deuxième scan de démarrer pendant qu'un autre était déjà en cours, cliquer plusieurs fois sur Rescanner pouvait laisser la liste dans un état incohérent. Le bouton est désormais désactivé pendant qu'un scan ou un nettoyage est déjà en cours.</p>
+
+  <h2>Corrigé : l'espace libéré pouvait être surestimé</h2>
+  <p>Le cache de Chrome et Edge est en réalité composé de deux dossiers (Cache et Code Cache) affichés comme un seul élément. Si un seul des deux pouvait être supprimé, par exemple parce que l'autre était verrouillé par un navigateur en cours d'exécution, l'application indiquait quand même la taille combinée des deux comme libérée. L'espace libéré est désormais mesuré à partir de ce qui a réellement été supprimé, pas supposé à partir du scan d'origine.</p>
+
+  <h2>Corrigé : message trompeur sur la liste blanche</h2>
+  <p>La boîte de dialogue de confirmation indiquait "les cookies de N domaines en liste blanche seront conservés" même quand aucun élément cookie n'était sélectionné au départ, par exemple en ne nettoyant que le cache ou l'historique. Elle ne mentionne désormais la liste blanche que quand les cookies font effectivement partie de ce qui est nettoyé.</p>
+
+  <div class="cta-box">
+    <p>Rien de tout ça ne change ce que fait la fonctionnalité, seulement la précision avec laquelle elle rend compte de ce qui s'est passé.</p>
+  </div>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger v1.5.0</h2>
+    <p>Gratuit pour toujours, pas de compte, pas d'essai.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Setup.exe">Télécharger pour Windows</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas encore de certificat de signature de code commercial, donc Windows peut afficher un bref avertissement "éditeur inconnu" au premier lancement. Le code source est public sur GitHub, et chaque version est publiée avec une empreinte SHA-256 vérifiable.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>

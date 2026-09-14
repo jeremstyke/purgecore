@@ -45,6 +45,7 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
 - Free up RAM (real before/after numbers, not a promised gain)
 - Uninstall programs (largest first, search, uses each program's own official uninstaller)
 - Flush DNS cache (one click, no files or registry touched)
+- Battery health report (Windows' own diagnostic, laptops only)
 - Startup program manager (enable/disable/remove apps that launch with Windows, per-user only, no admin rights needed)
 - Driver info (read-only): installed drivers, flags ones 3+ years old, links to Windows Update and manufacturer sites, never downloads or installs anything itself
 - In-app update notifications, with one-click download and install

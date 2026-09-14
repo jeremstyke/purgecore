@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore v1.10.0 : Fini les popups en plein nettoyage</title>
+<meta name="description" content="La v1.10.0 de PurgeCore corrige un vrai bug bloquant, le contraste des icônes de la sidebar, et une quinzaine de boutons jamais stylés.">
+<meta property="og:title" content="PurgeCore v1.10.0 : Fini les popups en plein nettoyage">
+<meta property="og:description" content="La v1.10.0 de PurgeCore corrige un vrai bug bloquant, le contraste des icônes de la sidebar, et une quinzaine de boutons jamais stylés.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/v1-10-0-release-notes.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/v1-10-0-release-notes.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/v1-10-0-release-notes.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag">Release notes</span>
+  </div>
+  <h1>PurgeCore v1.10.0 : Fini les popups en plein nettoyage</h1>
+  <p class="article-meta">2026</p>
+
+  <p>De vrais bugs cette fois, remontés et confirmés sur une vraie machine Windows.</p>
+
+  <h2>Corrigé : une boîte de dialogue Windows native pouvait interrompre complètement le nettoyage</h2>
+  <p>Supprimer un fichier verrouillé, un fichier temporaire encore ouvert dans Edge, par exemple, pouvait faire apparaître la boîte de dialogue native "Fichier utilisé" de Windows et arrêter net le nettoyage jusqu'à ce que quelqu'un clique sur quelque chose. L'API de suppression vers la Corbeille utilisée par PurgeCore n'a pas de mode totalement silencieux, ce n'était donc pas une simple correction de paramètre : l'application vérifie désormais si un fichier est verrouillé avant de tenter de le supprimer, et l'ignore silencieusement si c'est le cas, la même correction s'applique désormais partout où quelque chose est supprimé (fichiers temporaires, doublons, dossiers vides, données de navigateur).</p>
+
+  <h2>Corrigé : les icônes de la sidebar étaient à peine visibles</h2>
+  <p>Les icônes de navigation colorées introduites quelques versions plus tôt n'avaient pas assez de contraste face au dégradé de la sidebar. Elles reposent désormais sur un badge coloré uni avec une icône blanche par-dessus, bien plus facile à distinguer en un coup d'œil.</p>
+
+  <h2>Nouveau : lien "Quoi de neuf ?" dans le bandeau de mise à jour</h2>
+  <p>Quand une mise à jour est disponible, le bandeau inclut désormais un lien direct vers les notes de version de cette version, pour voir ce qui change réellement avant de décider de mettre à jour.</p>
+
+  <h2>Corrigé : une quinzaine de boutons dans l'application n'avaient aucun style</h2>
+  <p>Une poignée de boutons, principalement dans Explorer (Fichiers volumineux, Dossiers, Anciens fichiers) et quelques autres éparpillés ailleurs, n'avaient jamais été stylés et retombaient sur l'apparence brute par défaut de Windows : blanc uni, coins nets, aucune couleur. Ils correspondent désormais au reste de l'application.</p>
+
+  <h2>Mis à jour en v1.10.1 : bouton Soutiens, NordVPN remonté</h2>
+  <p>Deux petits ajouts juste après cette version : un bouton "Soutiens" à côté de "Offrir un café" et "Signaler un bug" dans la sidebar, menant vers la page <a href="../supporters.html">Merci à nos soutiens</a>. Et la carte de recommandation NordVPN, auparavant plus bas sur le Tableau de bord, se trouve désormais juste après les cartes de disques pour rester visible sans défiler sur un petit écran.</p>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger v1.10.1</h2>
+    <p>Gratuit pour toujours, pas de compte, pas d'essai.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Setup.exe">Télécharger pour Windows</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas encore de certificat de signature de code commercial, donc Windows peut afficher un bref avertissement "éditeur inconnu" au premier lancement. Le code source est public sur GitHub, et chaque version est publiée avec une empreinte SHA-256 vérifiable.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>

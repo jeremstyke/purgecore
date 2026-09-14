@@ -19,7 +19,7 @@ public sealed class DriveEnumerator : IDriveEnumerator
             try
             {
                 result.Add(new DriveInfoModel(
-                    drive.Name,
+                    drive.VolumeLabel,
                     drive.RootDirectory.FullName,
                     drive.TotalSize,
                     drive.TotalFreeSpace,

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore v1.7.0 : Un vrai bug de nettoyage corrigé, et un nouveau visuel</title>
+<meta name="description" content="La v1.7.0 de PurgeCore corrige un vrai bug de nettoyage système et introduit une refonte visuelle complète.">
+<meta property="og:title" content="PurgeCore v1.7.0 : Un vrai bug de nettoyage corrigé, et un nouveau visuel">
+<meta property="og:description" content="La v1.7.0 de PurgeCore corrige un vrai bug de nettoyage système et introduit une refonte visuelle complète.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/v1-7-0-release-notes.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/v1-7-0-release-notes.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/v1-7-0-release-notes.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag">Release notes</span>
+  </div>
+  <h1>PurgeCore v1.7.0 : Un vrai bug de nettoyage corrigé, et un nouveau visuel</h1>
+  <p class="article-meta">2026</p>
+
+  <p>Une version plus importante que d'habitude : un vrai bug à connaître, et une véritable refonte, pas juste un ajustement.</p>
+
+  <h2>Corrigé : le nettoyage système pouvait signaler un espace libéré qu'il n'avait pas réellement libéré</h2>
+  <p>Le nettoyeur de fichiers temporaires et de Corbeille avait un vrai bug : il ne vérifiait pas si chaque fichier individuel avait effectivement été supprimé avant de déclarer un succès. Les fichiers temporaires sont fréquemment verrouillés par des programmes en cours d'exécution, donc si la suppression échouait silencieusement pour certains ou tous, l'application pouvait quand même annoncer "X Go libérés" alors que peu ou rien ne s'était réellement passé. C'est maintenant corrigé, l'application mesure et déclare uniquement ce qui a été réellement supprimé.</p>
+
+  <h2>Un design plus audacieux et plus coloré</h2>
+  <p>L'interface a un vrai rafraîchissement visuel : une sidebar en dégradé vif (bleu, violet, sarcelle), des boutons en dégradé, des icônes de navigation colorées, et plus d'animation partout, une sensation plus rebondissante au survol et à la sélection, un badge bêta pulsant, et un vrai indicateur de chargement pendant les scans et nettoyages.</p>
+
+  <h2>Le blog dans son propre onglet</h2>
+  <p>Les notes de version et les guides partageaient auparavant l'espace du Tableau de bord avec le reste. Ils ont désormais leur propre onglet Blog, libérant de la place pour une carte de recommandation NordVPN plus grande et plus visible sur le Tableau de bord.</p>
+
+  <h2>Les pilotes sont maintenant cliquables</h2>
+  <p>Cliquer sur un pilote dans l'onglet Explorer affiche désormais depuis combien de temps il a été mis à jour en langage clair ("il y a 3 ans" plutôt qu'une date brute), une courte explication de ce que fait réellement un pilote et pourquoi la mise à jour est optionnelle, puis propose d'ouvrir le site du fabricant, plutôt que d'y aller directement.</p>
+
+  <h2>Également dans cette version</h2>
+  <ul>
+    <li>"Signaler un bug" ouvre désormais un email au lieu d'une issue GitHub</li>
+    <li>Le bandeau de mise à jour échouait auparavant silencieusement en cas de délai réseau dépassé ou d'invite de sécurité Windows refusée, il affiche désormais un message clair expliquant ce qui s'est passé</li>
+  </ul>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger v1.7.0</h2>
+    <p>Gratuit pour toujours, pas de compte, pas d'essai.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Setup.exe">Télécharger pour Windows</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas encore de certificat de signature de code commercial, donc Windows peut afficher un bref avertissement "éditeur inconnu" au premier lancement. Le code source est public sur GitHub, et chaque version est publiée avec une empreinte SHA-256 vérifiable.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>

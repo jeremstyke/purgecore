@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore v1.0.1 : Nettoyage, doublons, RAM et export CSV</title>
+<meta name="description" content="La v1.0.1 de PurgeCore ajoute une section Nettoyage et l'export des résultats de scan.">
+<meta property="og:title" content="PurgeCore v1.0.1 : Nettoyage, doublons, RAM et export CSV">
+<meta property="og:description" content="La v1.0.1 de PurgeCore ajoute une section Nettoyage et l'export des résultats de scan.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/v1-0-1-release-notes.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/v1-0-1-release-notes.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/v1-0-1-release-notes.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag">Release notes</span>
+  </div>
+  <h1>PurgeCore v1.0.1 : Nettoyage, doublons, RAM et export CSV</h1>
+  <p class="article-meta">2026</p>
+
+  <p>La v1.0.1 ajoute une section Nettoyage et un moyen d'exporter les résultats de scan, en plus de tout ce qui existait dans la v1.0.0 d'origine.</p>
+
+  <h2>Nouveau : onglet Nettoyage</h2>
+  <p>Une nouvelle entrée dans la sidebar regroupe quatre outils :</p>
+  <ul>
+    <li><strong>Doublons</strong> - trouve les fichiers au contenu identique (1 Mo et plus), comparés par contenu réel, pas seulement par nom ou taille, donc les copies renommées sont détectées et les fichiers de même taille mais de contenu différent ne sont pas signalés à tort.</li>
+    <li><strong>Anciens fichiers</strong> - les fichiers les plus anciens du dernier scan, triés par date de modification, généralement un moyen rapide de repérer des choses oubliées.</li>
+    <li><strong>Dossiers vides</strong> - des dossiers qui ne contiennent absolument rien, même après vérification de chaque sous-dossier.</li>
+    <li><strong>Libérer la RAM</strong> - demande à Windows de récupérer la mémoire inutilisée. Affiché avec de vrais chiffres avant/après plutôt qu'un gain promis, l'effet réel de ce type d'action sur les versions récentes de Windows étant souvent plus faible que ce que les outils "nettoyeur de RAM" laissent entendre.</li>
+  </ul>
+
+  <h2>Nouveau : export d'un rapport de scan en CSV</h2>
+  <p>Après un scan dans l'onglet Analyser, un bouton "Exporter le rapport" enregistre un CSV avec les totaux du scan, la répartition du stockage par catégorie, et les plus gros dossiers et fichiers, utile pour garder une trace ou partager des résultats.</p>
+
+  <h2>Ce qui n'a pas changé</h2>
+  <p>Toujours uniquement de l'analyse : rien dans cette version ne supprime ou ne modifie de fichiers. Toujours entièrement local : aucune de ces fonctionnalités n'envoie quoi que ce soit sur vos fichiers où que ce soit.</p>
+
+  <div class="cta-box">
+    <p>Vous avez déjà la v1.0.0 installée ? L'installeur mis à jour la détecte, ferme l'application en cours d'exécution, et réinstalle par-dessus automatiquement, pas besoin de désinstaller d'abord.</p>
+  </div>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger v1.0.1</h2>
+    <p>Gratuit pour toujours, pas de compte, pas d'essai.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Setup.exe">Télécharger pour Windows</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas encore de certificat de signature de code commercial, donc Windows peut afficher un bref avertissement "éditeur inconnu" au premier lancement. Le code source est public sur GitHub, et chaque version est publiée avec une empreinte SHA-256 vérifiable.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>
