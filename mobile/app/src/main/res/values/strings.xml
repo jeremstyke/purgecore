@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PurgeCore Mobile</string>
+    <string name="nav_storage">Storage</string>
+    <string name="nav_duplicates">Duplicate Photos</string>
+    <string name="storage_title">Your storage</string>
+    <string name="storage_used_of_total">%1$s used of %2$s</string>
+    <string name="storage_free">%1$s free</string>
+    <string name="duplicates_title">Duplicate Photos &amp; Videos</string>
+    <string name="duplicates_body">Finds photos and videos with identical content, so you can free up space without losing anything unique.</string>
+    <string name="duplicates_scan">Scan for duplicates</string>
+    <string name="duplicates_scanning">Scanning your media library…</string>
+    <string name="duplicates_none_found">No duplicates found.</string>
+    <string name="duplicates_group_count">%1$d duplicates</string>
+    <string name="duplicates_delete_extra">Delete extra copies</string>
+    <string name="duplicates_permission_rationale">PurgeCore Mobile needs access to your photos and videos to find duplicates. Nothing ever leaves your device.</string>
+    <string name="duplicates_grant_permission">Grant access</string>
+</resources>

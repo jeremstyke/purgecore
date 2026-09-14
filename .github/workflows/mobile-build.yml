@@ -1,0 +1,43 @@
+name: Mobile Build
+
+# Compiles the Android app on every push/PR that touches mobile/, so a
+# broken build is caught immediately rather than only when tagging a
+# release. Separate from the main "Build" workflow (Windows), which only
+# watches src/ and tests/.
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "mobile/**"
+      - ".github/workflows/mobile-build.yml"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "mobile/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build debug APK
+        working-directory: mobile
+        run: |
+          if [ ! -f gradlew ]; then
+            gradle wrapper --gradle-version 8.10.2
+            chmod +x gradlew
+          fi
+          ./gradlew :app:assembleDebug --no-daemon
