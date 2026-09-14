@@ -7,7 +7,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -16,6 +15,7 @@ import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
+import com.jeremstyke.purgecoremobile.ui.components.StorageRing
 import java.text.CharacterIterator
 import java.text.StringCharacterIterator
 
@@ -50,15 +50,15 @@ fun StorageScreen() {
         ) {
             storageInfo?.let { info ->
             Card(shape = RoundedCornerShape(16.dp)) {
-                Column(Modifier.padding(20.dp)) {
-                    LinearProgressIndicator(
-                        progress = { info.usedFraction },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(10.dp)
-                            .clip(RoundedCornerShape(999.dp)),
+                Column(
+                    modifier = Modifier.padding(20.dp).fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    StorageRing(
+                        usedFraction = info.usedFraction,
+                        centerLabel = "${(info.usedFraction * 100).toInt()}%"
                     )
-                    Spacer(Modifier.height(12.dp))
+                    Spacer(Modifier.height(16.dp))
                     Text(
                         "${formatBytes(info.usedBytes)} used of ${formatBytes(info.totalBytes)}",
                         style = MaterialTheme.typography.bodyMedium
