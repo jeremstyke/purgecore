@@ -6,14 +6,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
-import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
-import com.jeremstyke.purgecoremobile.ui.components.StorageRing
 import java.text.CharacterIterator
 import java.text.StringCharacterIterator
 
@@ -37,69 +36,44 @@ fun StorageScreen() {
         storageInfo = StorageRepository.readStorageInfo()
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        BrandHeader(
-            title = stringResource(R.string.storage_title),
-            subtitle = "PurgeCore Mobile"
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp)
+    ) {
+        Text(
+            text = stringResource(R.string.storage_title),
+            style = MaterialTheme.typography.headlineSmall,
+            fontWeight = FontWeight.Bold
         )
+        Spacer(Modifier.height(20.dp))
 
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            storageInfo?.let { info ->
-                Spacer(Modifier.height(12.dp))
-                StorageRing(
-                    usedFraction = info.usedFraction,
-                    centerLabel = "${(info.usedFraction * 100).toInt()}%"
-                )
-                Spacer(Modifier.height(24.dp))
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    StatCard(
-                        modifier = Modifier.weight(1f),
-                        label = "Used",
-                        value = formatBytes(info.usedBytes)
+        storageInfo?.let { info ->
+            Card(shape = RoundedCornerShape(16.dp)) {
+                Column(Modifier.padding(20.dp)) {
+                    LinearProgressIndicator(
+                        progress = { info.usedFraction },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(10.dp)
+                            .clip(RoundedCornerShape(999.dp)),
                     )
-                    StatCard(
-                        modifier = Modifier.weight(1f),
-                        label = "Free",
-                        value = formatBytes(info.freeBytes)
+                    Spacer(Modifier.height(12.dp))
+                    Text(
+                        "${formatBytes(info.usedBytes)} used of ${formatBytes(info.totalBytes)}",
+                        style = MaterialTheme.typography.bodyMedium
                     )
-                }
-            } ?: run {
-                Box(Modifier.fillMaxWidth().padding(60.dp), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator()
+                    Text(
+                        "${formatBytes(info.freeBytes)} free",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun StatCard(modifier: Modifier = Modifier, label: String, value: String) {
-    Card(
-        modifier = modifier,
-        shape = RoundedCornerShape(16.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-    ) {
-        Column(Modifier.padding(16.dp)) {
-            Text(
-                text = label,
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Spacer(Modifier.height(4.dp))
-            Text(
-                text = value,
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.titleLarge
-            )
+        } ?: run {
+            Box(Modifier.fillMaxWidth().padding(40.dp), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
         }
     }
 }
