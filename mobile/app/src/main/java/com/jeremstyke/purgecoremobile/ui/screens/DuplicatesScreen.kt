@@ -113,7 +113,7 @@ fun DuplicatesScreen() {
             subtitle = stringResource(R.string.duplicates_body)
         )
 
-        content@ Column(modifier = Modifier.fillMaxSize().padding(24.dp)) {
+        Column(modifier = Modifier.fillMaxSize().padding(24.dp)) content@ {
         Spacer(Modifier.height(4.dp))
 
         if (!hasPermission) {
