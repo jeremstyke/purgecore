@@ -246,7 +246,7 @@ public sealed partial class MainViewModel : ObservableObject
         Process.Start(new ProcessStartInfo(ReportBugUrl) { UseShellExecute = true });
     }
 
-    public const string ReportBugUrl = "mailto:juryjeremy@gmail.com?subject=PurgeCore%20-%20Bug%20report";
+    public const string ReportBugUrl = "mailto:juryjeremy@gmail.com?subject=PurgeCore%20Windows%20-%20Bug%20report";
     public const string SupportersUrlEn = "https://jeremstyke.github.io/purgecore/supporters.html";
     public const string SupportersUrlFr = "https://jeremstyke.github.io/purgecore/fr/supporters.html";
 }

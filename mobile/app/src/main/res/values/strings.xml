@@ -15,4 +15,5 @@
     <string name="duplicates_permission_rationale">PurgeCore Mobile needs access to your photos and videos to find duplicates. Nothing ever leaves your device.</string>
     <string name="duplicates_grant_permission">Grant access</string>
     <string name="visit_website">Visit the PurgeCore website</string>
+    <string name="report_bug">Report a bug</string>
 </resources>

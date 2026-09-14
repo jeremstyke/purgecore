@@ -11,7 +11,7 @@ public sealed partial class AboutViewModel : ObservableObject
 {
     public const string GitHubUrl = "https://github.com/jeremstyke/purgecore";
     public const string CoffeeUrl = "https://jeremstyke.gumroad.com/coffee";
-    public const string ReportBugUrl = "mailto:juryjeremy@gmail.com?subject=PurgeCore%20-%20Bug%20report";
+    public const string ReportBugUrl = "mailto:juryjeremy@gmail.com?subject=PurgeCore%20Windows%20-%20Bug%20report";
 
     private readonly ISupportersService _supportersService;
 

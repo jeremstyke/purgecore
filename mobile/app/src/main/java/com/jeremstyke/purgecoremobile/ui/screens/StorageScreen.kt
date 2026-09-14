@@ -77,13 +77,25 @@ fun StorageScreen() {
         }
             Spacer(Modifier.weight(1f))
             Text(
+                text = stringResource(R.string.report_bug),
+                style = MaterialTheme.typography.bodySmall,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp)
+                    .clickable {
+                        uriHandler.openUri("mailto:juryjeremy@gmail.com?subject=PurgeCore%20Mobile%20-%20Bug%20report")
+                    },
+            )
+            Text(
                 text = stringResource(R.string.visit_website),
                 style = MaterialTheme.typography.bodySmall,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp)
+                    .padding(top = 8.dp, bottom = 16.dp)
                     .clickable { uriHandler.openUri("https://jeremstyke.github.io/purgecore/mobile.html") },
             )
         }
