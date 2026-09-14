@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore v1.11.3: Drive Selector Fixes</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-3-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-3-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>The drive dropdown styling and a duplicate "C:\ - C:\" display bug fixed, Battery Health added to the documentation.</description>
+    </item>
+    <item>
       <title>PurgeCore v1.11.2: Invisible Tabs Fixed</title>
       <link>https://jeremstyke.github.io/purgecore/blog/v1-11-2-release-notes.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-2-release-notes.html</guid>

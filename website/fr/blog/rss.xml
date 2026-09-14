@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore v1.11.3 : Corrections des sélecteurs de disque</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-3-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-3-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>Le style des listes déroulantes de disque et un bug d'affichage corrigés, Santé de la batterie ajoutée à la documentation.</description>
+    </item>
+    <item>
       <title>PurgeCore v1.11.2 : Onglets invisibles corrigés</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-2-release-notes.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-2-release-notes.html</guid>
