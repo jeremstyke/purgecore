@@ -96,8 +96,8 @@ PurgeCore has one tier: everything, free, forever. No premium upgrade, no ads in
 </Application_URLs>
 
 <Download_URLs>
-<Primary_Download_URL>https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Setup.exe</Primary_Download_URL>
-<Secondary_Download_URL>https://github.com/jeremstyke/purgecore/releases/latest/download/PurgeCore-Portable.zip</Secondary_Download_URL>
+<Primary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.3/PurgeCore-Setup.exe</Primary_Download_URL>
+<Secondary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.3/PurgeCore-Portable.zip</Secondary_Download_URL>
 <Additional_Download_URL1></Additional_Download_URL1>
 <Additional_Download_URL2></Additional_Download_URL2>
 </Download_URLs>
