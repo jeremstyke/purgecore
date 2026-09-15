@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.IO;
+using System.Threading;
 using FreeDiskAnalyzer.Core.Utilities;
 using Microsoft.VisualBasic.FileIO;
 
@@ -65,23 +66,37 @@ public sealed class SafeDeleteService : ISafeDeleteService
     /// Windows itself would do. If another process has it open, this throws
     /// immediately instead of blocking, which is exactly what we want here:
     /// a quick, silent yes/no answer.
+    ///
+    /// A single attempt can misfire: Windows Search indexing, antivirus
+    /// real-time scanning, or a browser that just closed but hasn't
+    /// released its SQLite journal file yet can all hold a brief lock with
+    /// nothing actually "open" from the user's point of view. A genuinely
+    /// running browser holds its files locked continuously, a transient
+    /// scan does not, so a couple of short retries tell them apart without
+    /// meaningfully slowing down a scan that's actually clear.
     /// </summary>
     private static bool IsFileLocked(string path)
     {
-        try
+        const int maxAttempts = 3;
+        for (var attempt = 1; attempt <= maxAttempts; attempt++)
         {
-            using var stream = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.None);
-            return false;
+            try
+            {
+                using var stream = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.None);
+                return false;
+            }
+            catch (IOException)
+            {
+                if (attempt == maxAttempts) return true;
+                Thread.Sleep(150);
+            }
+            catch (Exception ex) when (ex is UnauthorizedAccessException or Win32Exception)
+            {
+                // Can't tell for sure, but also can't safely proceed, treat as
+                // locked rather than risk the native dialog.
+                return true;
+            }
         }
-        catch (IOException)
-        {
-            return true;
-        }
-        catch (Exception ex) when (ex is UnauthorizedAccessException or Win32Exception)
-        {
-            // Can't tell for sure, but also can't safely proceed, treat as
-            // locked rather than risk the native dialog.
-            return true;
-        }
+        return true;
     }
 }
