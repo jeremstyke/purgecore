@@ -7,8 +7,14 @@ namespace FreeDiskAnalyzer.Core.Services;
 
 public sealed class UpdateChecker : IUpdateChecker
 {
-    private const string ReleasesApiUrl = "https://api.github.com/repos/jeremstyke/purgecore/releases/latest";
+    // This repository also hosts PurgeCore Mobile releases (tagged
+    // mobile-v*.*.*), so /releases/latest can return a mobile release
+    // instead of the Windows one if it happens to be more recent. The full
+    // list is fetched instead, and the first entry NOT tagged mobile-* is
+    // used, that's the actual latest Windows release.
+    private const string ReleasesApiUrl = "https://api.github.com/repos/jeremstyke/purgecore/releases";
     private const string InstallerAssetName = "PurgeCore-Setup.exe";
+    private const string MobileTagPrefix = "mobile-";
 
     public async Task<UpdateInfo> CheckForUpdateAsync(string currentVersion, CancellationToken cancellationToken = default)
     {
@@ -25,14 +31,35 @@ public sealed class UpdateChecker : IUpdateChecker
 
             var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
             using var doc = await JsonDocument.ParseAsync(stream, cancellationToken: cancellationToken);
-            var root = doc.RootElement;
 
-            if (!root.TryGetProperty("tag_name", out var tagProp))
+            if (doc.RootElement.ValueKind != JsonValueKind.Array)
             {
                 return UpdateInfo.NoUpdate;
             }
 
-            var tagName = tagProp.GetString();
+            JsonElement? windowsRelease = null;
+            foreach (var release in doc.RootElement.EnumerateArray())
+            {
+                if (release.TryGetProperty("tag_name", out var tagProp) &&
+                    tagProp.GetString() is { } tag &&
+                    !tag.StartsWith(MobileTagPrefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    windowsRelease = release;
+                    break;
+                }
+            }
+
+            if (windowsRelease is not { } root)
+            {
+                return UpdateInfo.NoUpdate;
+            }
+
+            if (!root.TryGetProperty("tag_name", out var tagNameProp))
+            {
+                return UpdateInfo.NoUpdate;
+            }
+
+            var tagName = tagNameProp.GetString();
             if (string.IsNullOrWhiteSpace(tagName))
             {
                 return UpdateInfo.NoUpdate;
