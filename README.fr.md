@@ -21,12 +21,18 @@ Analyse de disque, doublons, nettoyage navigateurs et PC, gestion démarrage et 
 </p>
 
 <p align="center">
-  <a href="../../releases/latest/download/PurgeCore-Setup.exe">
+  <a href="../../releases/download/v1.11.4/PurgeCore-Setup.exe">
     <img src="https://img.shields.io/badge/%E2%86%93%20T%C3%A9l%C3%A9charger-pour%20Windows-2563EB?style=for-the-badge" alt="Télécharger pour Windows" />
   </a>
 </p>
 
-<p align="center"><sub>Utilisateur avancé ? <a href="../../releases/latest/download/PurgeCore-Portable.zip">Téléchargez la version portable</a>, pas d'installation, pas besoin de droits admin. · Annuaire de logiciels ? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">Fichier PAD ici</a>.</sub></p>
+<p align="center">
+  <a href="../../releases/download/mobile-v1.0.1/PurgeCoreMobile-1.0.1.apk">
+    <img src="https://img.shields.io/badge/%E2%86%93%20T%C3%A9l%C3%A9charger-pour%20Android-E11D48?style=for-the-badge" alt="Télécharger pour Android" />
+  </a>
+</p>
+
+<p align="center"><sub>Utilisateur avancé ? <a href="../../releases/download/v1.11.4/PurgeCore-Portable.zip">Téléchargez la version portable</a>, pas d'installation, pas besoin de droits admin. · Annuaire de logiciels ? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">Fichier PAD ici</a>.</sub></p>
 
 > [Voir toutes les versions](../../releases)
 
