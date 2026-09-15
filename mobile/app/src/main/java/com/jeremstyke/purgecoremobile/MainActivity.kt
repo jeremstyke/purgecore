@@ -96,3 +96,4 @@ private fun AppBottomBar(navController: NavHostController) {
         }
     }
 }
+
