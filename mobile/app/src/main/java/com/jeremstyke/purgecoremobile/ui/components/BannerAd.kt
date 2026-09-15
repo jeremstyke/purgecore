@@ -4,6 +4,8 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
@@ -21,23 +23,24 @@ private const val BANNER_AD_UNIT_ID = "ca-app-pub-8638687738606649/8466667977"
 @Composable
 fun BannerAd(modifier: Modifier = Modifier) {
     val context = LocalContext.current
+    val adView = remember {
+        AdView(context).apply {
+            setAdSize(AdSize.BANNER)
+            adUnitId = BANNER_AD_UNIT_ID
+            layoutParams = FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            loadAd(AdRequest.Builder().build())
+        }
+    }
 
-    AndroidView(
-        modifier = modifier.fillMaxWidth(),
-        factory = {
-            AdView(context).apply {
-                setAdSize(AdSize.BANNER)
-                adUnitId = BANNER_AD_UNIT_ID
-                layoutParams = FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                )
-                loadAd(AdRequest.Builder().build())
-            }
-        },
-        // Without this, the AdView's resources were never released when
-        // this composable left composition, a real resource leak per
-        // AdMob's own Compose integration guidance.
-        onRelease = { adView -> adView.destroy() }
-    )
+    // Explicitly releasing the AdView's resources when this composable
+    // leaves composition, otherwise they're held onto indefinitely, a real
+    // leak per AdMob's own integration guidance.
+    DisposableEffect(Unit) {
+        onDispose { adView.destroy() }
+    }
+
+    AndroidView(modifier = modifier.fillMaxWidth(), factory = { adView })
 }
