@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore v1.11.5: Two False-Positive Bugs Fixed</title>
+<meta name="description" content="PurgeCore v1.11.5 fixes browser cleanup wrongly reporting a browser as open, and the startup manager showing a stale disabled state.">
+<meta property="og:title" content="PurgeCore v1.11.5: Two False-Positive Bugs Fixed">
+<meta property="og:description" content="Browser cleanup wrongly reporting a browser as open, and the startup manager showing a stale disabled state, both fixed.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html">
+<link rel="icon" type="image/png" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="PurgeCore Blog" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Features</a>
+      <a href="../mobile.html">Mobile</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../about.html">About</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offer a coffee</a>
+      <div class="lang-switch"><a href="../fr/blog/v1-11-5-release-notes.html">FR</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Back to blog</a>
+
+  <div class="article-header">
+    <span class="article-tag">Release notes</span>
+  </div>
+  <h1>PurgeCore v1.11.5: Two False-Positive Bugs Fixed</h1>
+  <p class="article-meta">2026</p>
+
+  <h2>Fixed: browser cleanup could wrongly report a browser as open</h2>
+  <p>The lock check used a single strict attempt to open each file exclusively. That's the right test in principle, but a single attempt could misfire on Windows Search indexing, antivirus real-time scanning, or a browser that just closed but hadn't released its SQLite journal file yet, none of which mean the browser is genuinely still open. It now retries a couple of times over roughly 300ms before concluding a file is actually locked. Files that are already free are unaffected, no added delay.</p>
+
+  <h2>Fixed: the startup manager could keep showing a stale disabled state</h2>
+  <p>Some programs re-add their own Run key entry the next time they start, a real, common safeguard many apps have against exactly this kind of tool disabling them. When that happened, PurgeCore kept trusting its own backup of "you disabled this" instead of the registry's actual current state, showing the item as disabled (or even listing it twice) when it had, in fact, come back on its own. The list now reconciles with the registry on every scan, so it reflects what's actually there rather than PurgeCore's last action on it.</p>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Download v1.11.5</h2>
+    <p>Free forever, no account, no trial.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/download/v1.11.5/PurgeCore-Setup.exe">Download for Windows</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">No commercial code-signing certificate yet, so Windows may show a brief "unknown publisher" warning on first run. The source is public on GitHub, and each release is published with a SHA-256 checksum you can verify.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. All rights reserved. If PurgeCore is useful to you, you can <a href="https://jeremstyke.gumroad.com/coffee">offer a coffee</a>.</div>
+    <div class="disclosure">PurgeCore may recommend products through affiliate links, clearly labeled where they appear in the app. This never affects what the app itself costs you.</div>
+  </div>
+</footer>
+
+<script src="../assets/animations.js" defer></script>
+</body>
+</html>

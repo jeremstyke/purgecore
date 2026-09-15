@@ -7,6 +7,20 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore v1.11.5 : Deux faux positifs corrigés</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-5-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-5-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>Le nettoyage navigateur qui signalait à tort un navigateur ouvert, et le gestionnaire de démarrage qui affichait un état périmé, tous deux corrigés.</description>
+    </item>
+    <item>
+      <title>PurgeCore v1.11.4 : Liens de téléchargement corrigés</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-4-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-4-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>Le bouton de téléchargement du site et la vérification de mise à jour de l'app étaient tous deux silencieusement cassés depuis l'arrivée de PurgeCore Mobile dans ce dépôt.</description>
+    </item>
+    <item>
       <title>PurgeCore Mobile : Bêta plus visible, un second format publicitaire</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-beta-native-ads.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-beta-native-ads.html</guid>

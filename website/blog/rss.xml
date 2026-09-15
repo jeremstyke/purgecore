@@ -7,6 +7,20 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore v1.11.5: Two False-Positive Bugs Fixed</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>Browser cleanup wrongly reporting a browser as open, and the startup manager showing a stale disabled state, both fixed.</description>
+    </item>
+    <item>
+      <title>PurgeCore v1.11.4: Download Links Fixed</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-4-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-4-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>The website's download button and the app's own update checker were both silently broken since PurgeCore Mobile joined this repository.</description>
+    </item>
+    <item>
       <title>PurgeCore Mobile: Clearer Beta Label, a Second Ad Format</title>
       <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-beta-native-ads.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-beta-native-ads.html</guid>

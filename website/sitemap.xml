@@ -121,6 +121,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-5-release-notes.html</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/blog/v1-11-4-release-notes.html</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-4-release-notes.html</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jeremstyke.github.io/purgecore/blog/v1-11-3-release-notes.html</loc>
     <changefreq>never</changefreq>
     <priority>0.6</priority>
