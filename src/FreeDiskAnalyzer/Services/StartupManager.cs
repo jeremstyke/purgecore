@@ -30,11 +30,44 @@ public sealed class StartupManager : IStartupManager
     {
         return Task.Run(() =>
         {
+            ReconcileStaleDisabledEntries();
+
             var items = new List<StartupItem>();
             items.AddRange(GetRegistryItems());
             items.AddRange(GetStartupFolderItems());
             return (IReadOnlyList<StartupItem>)items;
         }, cancellationToken);
+    }
+
+    /// <summary>
+    /// If a name we previously disabled (and backed up) has since reappeared
+    /// in the live Run key, some other program put it back, our backup
+    /// entry is now stale and would otherwise keep disagreeing with the
+    /// registry's actual state on every scan. Removing it here means the
+    /// next scan reflects reality instead of our last action on it.
+    /// </summary>
+    private static void ReconcileStaleDisabledEntries()
+    {
+        try
+        {
+            using var runKey = Registry.CurrentUser.OpenSubKey(RunKeyPath, writable: false);
+            using var disabledKey = Registry.CurrentUser.OpenSubKey(DisabledBackupKeyPath, writable: true);
+            if (runKey is null || disabledKey is null) return;
+
+            var runNames = new HashSet<string>(runKey.GetValueNames(), StringComparer.OrdinalIgnoreCase);
+            foreach (var name in disabledKey.GetValueNames())
+            {
+                if (runNames.Contains(name))
+                {
+                    disabledKey.DeleteValue(name, throwOnMissingValue: false);
+                }
+            }
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or SecurityException)
+        {
+            // Not critical, the dedup in GetRegistryItems already prevents
+            // a confusing double listing even if this cleanup can't run.
+        }
     }
 
     public Task<StartupItem?> SetEnabledAsync(StartupItem item, bool enabled, CancellationToken cancellationToken = default)
@@ -81,6 +114,8 @@ public sealed class StartupManager : IStartupManager
 
     private static IEnumerable<StartupItem> GetRegistryItems()
     {
+        var seenNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
         using var runKey = Registry.CurrentUser.OpenSubKey(RunKeyPath, writable: false);
         if (runKey is not null)
         {
@@ -88,6 +123,18 @@ public sealed class StartupManager : IStartupManager
             {
                 if (string.IsNullOrEmpty(name)) continue;
                 if (string.Equals(name, SelfRunValueName, StringComparison.OrdinalIgnoreCase)) continue;
+
+                // Some programs re-add their own Run entry the next time
+                // they start, as a safeguard against exactly this kind of
+                // tool disabling them. If that happens, the registry's Run
+                // key is the true current state, our own "disabled" backup
+                // is now stale for this entry, and showing it as disabled
+                // here would be actively wrong (that's what "it keeps
+                // coming back" looks like from the user's side: toggled
+                // off, silently back on, and the list still claimed it was
+                // off). Preferring Run here also lets the item below clean
+                // up the leftover backup entry so future scans agree.
+                seenNames.Add(name);
 
                 yield return new StartupItem
                 {
@@ -106,6 +153,7 @@ public sealed class StartupManager : IStartupManager
             {
                 if (string.IsNullOrEmpty(name)) continue;
                 if (string.Equals(name, SelfRunValueName, StringComparison.OrdinalIgnoreCase)) continue;
+                if (seenNames.Contains(name)) continue;
 
                 yield return new StartupItem
                 {
