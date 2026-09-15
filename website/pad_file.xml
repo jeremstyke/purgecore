@@ -31,9 +31,9 @@
 
 <Program_Info>
 <Program_Name>PurgeCore</Program_Name>
-<Program_Version>1.10.1</Program_Version>
+<Program_Version>1.11.4</Program_Version>
 <Program_Release_Month>09</Program_Release_Month>
-<Program_Release_Day>12</Program_Release_Day>
+<Program_Release_Day>15</Program_Release_Day>
 <Program_Release_Year>2026</Program_Release_Year>
 <Program_Cost_Dollars>0</Program_Cost_Dollars>
 <Program_Cost_Other_Code></Program_Cost_Other_Code>
@@ -53,12 +53,12 @@
 
 <Program_System_Requirements>Windows 10 or later, 64-bit (x64)</Program_System_Requirements>
 <Program_Language>ML</Program_Language>
-<Program_Change_Info>Uninstall programs feature, bold redesign with more color and animation, driver update reminders with plain explanations, DNS cache flush, Blog moved to its own tab, and several real bugs fixed (a Windows dialog interrupting cleanup on locked files, unstyled buttons, Startup Manager desync).</Program_Change_Info>
+<Program_Change_Info>Fixed the download links and in-app update checker, both were silently broken since PurgeCore Mobile releases started sharing this repository (they picked up the mobile release as "latest" and found no matching Windows installer). Also: redesigned drive dropdowns, a duplicate drive-name display bug fixed, Battery Health documented everywhere.</Program_Change_Info>
 
 <File_Info>
-<File_Size_Bytes>52365409</File_Size_Bytes>
-<File_Size_K>51138</File_Size_K>
-<File_Size_MB>49.94</File_Size_MB>
+<File_Size_Bytes>52376865</File_Size_Bytes>
+<File_Size_K>51149</File_Size_K>
+<File_Size_MB>49.95</File_Size_MB>
 </File_Info>
 
 <Expire_Info>
@@ -96,8 +96,8 @@ PurgeCore has one tier: everything, free, forever. No premium upgrade, no ads in
 </Application_URLs>
 
 <Download_URLs>
-<Primary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.3/PurgeCore-Setup.exe</Primary_Download_URL>
-<Secondary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.3/PurgeCore-Portable.zip</Secondary_Download_URL>
+<Primary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.4/PurgeCore-Setup.exe</Primary_Download_URL>
+<Secondary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.4/PurgeCore-Portable.zip</Secondary_Download_URL>
 <Additional_Download_URL1></Additional_Download_URL1>
 <Additional_Download_URL2></Additional_Download_URL2>
 </Download_URLs>
