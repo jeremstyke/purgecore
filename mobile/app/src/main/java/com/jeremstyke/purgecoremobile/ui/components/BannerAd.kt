@@ -34,6 +34,10 @@ fun BannerAd(modifier: Modifier = Modifier) {
                 )
                 loadAd(AdRequest.Builder().build())
             }
-        }
+        },
+        // Without this, the AdView's resources were never released when
+        // this composable left composition, a real resource leak per
+        // AdMob's own Compose integration guidance.
+        onRelease = { adView -> adView.destroy() }
     )
 }
