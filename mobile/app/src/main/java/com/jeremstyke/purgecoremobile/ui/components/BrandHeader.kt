@@ -24,6 +24,12 @@ fun BrandHeader(title: String, subtitle: String? = null) {
             .padding(horizontal = 24.dp, vertical = 28.dp)
     ) {
         Text(
+            text = "PurgeCore Mobile · Beta",
+            color = Color.White,
+            fontSize = 12.sp
+        )
+        Spacer(Modifier.height(4.dp))
+        Text(
             text = title,
             color = Color.White,
             fontWeight = FontWeight.Bold,

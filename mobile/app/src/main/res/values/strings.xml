@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PurgeCore Mobile</string>
+    <string name="app_name">PurgeCore Mobile (Beta)</string>
     <string name="nav_storage">Storage</string>
     <string name="nav_duplicates">Duplicate Photos</string>
     <string name="storage_title">Your storage</string>
