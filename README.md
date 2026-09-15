@@ -22,7 +22,7 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
 </p>
 
 <p align="center">
-  <a href="../../releases/download/v1.11.4/PurgeCore-Setup.exe">
+  <a href="../../releases/download/v1.11.5/PurgeCore-Setup.exe">
     <img src="https://img.shields.io/badge/%E2%86%93%20Download-for%20Windows-2563EB?style=for-the-badge" alt="Download for Windows" />
   </a>
 </p>
@@ -33,7 +33,7 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
   </a>
 </p>
 
-<p align="center"><sub>Power user? <a href="../../releases/download/v1.11.4/PurgeCore-Portable.zip">Download the portable version</a> instead, no installation, no admin rights needed. · Software directory? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">PAD file here</a>.</sub></p>
+<p align="center"><sub>Power user? <a href="../../releases/download/v1.11.5/PurgeCore-Portable.zip">Download the portable version</a> instead, no installation, no admin rights needed. · Software directory? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">PAD file here</a>.</sub></p>
 
 > [View all releases](../../releases)
 
