@@ -17,13 +17,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleEventObserver
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.DuplicateFinder
 import com.jeremstyke.purgecoremobile.data.DuplicateGroup
@@ -37,32 +34,17 @@ private fun mediaPermissions(): Array<String> =
         arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
     }
 
-private fun hasMediaPermission(context: android.content.Context): Boolean =
-    mediaPermissions().all {
-        ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
-    }
-
 @Composable
 fun DuplicatesScreen() {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    var hasPermission by remember { mutableStateOf(hasMediaPermission(context)) }
-
-    // If the user grants the permission from Android's own Settings screen
-    // (rather than the in-app prompt) and comes back, this screen would
-    // otherwise keep showing the "grant access" card forever, since the
-    // check above only runs once at first composition. Re-check whenever
-    // the app comes back to the foreground.
-    val lifecycleOwner = LocalLifecycleOwner.current
-    DisposableEffect(lifecycleOwner) {
-        val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME) {
-                hasPermission = hasMediaPermission(context)
+    var hasPermission by remember {
+        mutableStateOf(
+            mediaPermissions().all {
+                ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
             }
-        }
-        lifecycleOwner.lifecycle.addObserver(observer)
-        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+        )
     }
     var isScanning by remember { mutableStateOf(false) }
     var groups by remember { mutableStateOf<List<DuplicateGroup>>(emptyList()) }
