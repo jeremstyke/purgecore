@@ -27,7 +27,7 @@ Analyse de disque, doublons, nettoyage navigateurs et PC, gestion démarrage et 
 </p>
 
 <p align="center">
-  <a href="../../releases/download/mobile-v1.0.4/PurgeCoreMobile-1.0.4.apk">
+  <a href="../../releases/download/mobile-v1.0.5/PurgeCoreMobile-1.0.5.apk">
     <img src="https://img.shields.io/badge/%E2%86%93%20T%C3%A9l%C3%A9charger-pour%20Android-E11D48?style=for-the-badge" alt="Télécharger pour Android" />
   </a>
 </p>

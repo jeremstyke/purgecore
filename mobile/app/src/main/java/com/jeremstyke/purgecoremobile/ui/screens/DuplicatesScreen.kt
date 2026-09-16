@@ -111,6 +111,31 @@ fun DuplicatesScreen() {
         }
     }
 
+    fun deleteAllExtraCopies() {
+        // Same rule applied across every group at once: the first copy in
+        // each group is always kept, only the extras from every group are
+        // combined into a single request, so one tap clears the whole list
+        // instead of tapping "delete" once per group.
+        val urisToDelete = groups.flatMap { it.items.drop(1) }.map { it.uri }
+        if (urisToDelete.isEmpty()) return
+
+        if (Build.VERSION.SDK_INT >= 30) {
+            val pendingIntent = MediaStore.createDeleteRequest(context.contentResolver, urisToDelete)
+            deleteLauncher.launch(IntentSenderRequest.Builder(pendingIntent.intentSender).build())
+        } else {
+            scope.launch {
+                urisToDelete.forEach { uri ->
+                    try {
+                        context.contentResolver.delete(uri, null, null)
+                    } catch (e: RecoverableSecurityException) {
+                        // Same known gap as the single-group path above.
+                    }
+                }
+                groups = DuplicateFinder.findDuplicates(context)
+            }
+        }
+    }
+
     Column(modifier = Modifier.fillMaxSize()) {
         BrandHeader(
             title = stringResource(R.string.duplicates_title),
@@ -149,6 +174,28 @@ fun DuplicatesScreen() {
                     }
                     groups.isNotEmpty() -> {
                         LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                            item {
+                                Card(shape = RoundedCornerShape(16.dp)) {
+                                    Column(Modifier.padding(16.dp)) {
+                                        Button(
+                                            onClick = { deleteAllExtraCopies() },
+                                            modifier = Modifier.fillMaxWidth()
+                                        ) {
+                                            Text(stringResource(R.string.duplicates_delete_all))
+                                        }
+                                        Spacer(Modifier.height(6.dp))
+                                        Text(
+                                            text = String.format(
+                                                stringResource(R.string.duplicates_delete_all_reclaimable),
+                                                formatBytes(groups.sumOf { it.reclaimableBytes }),
+                                                groups.size
+                                            ),
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                    }
+                                }
+                            }
                             item {
                                 NativeAdCard()
                             }

@@ -13,6 +13,8 @@
     <string name="duplicates_none_found">No duplicates found.</string>
     <string name="duplicates_group_count">%1$d duplicates</string>
     <string name="duplicates_delete_extra">Delete extra copies</string>
+    <string name="duplicates_delete_all">Delete all extra copies</string>
+    <string name="duplicates_delete_all_reclaimable">Frees up %1$s across %2$d groups</string>
     <string name="duplicates_permission_rationale">PurgeCore Mobile needs access to your photos and videos to find duplicates. Nothing ever leaves your device.</string>
     <string name="duplicates_grant_permission">Grant access</string>
     <string name="visit_website">Visit the PurgeCore website</string>

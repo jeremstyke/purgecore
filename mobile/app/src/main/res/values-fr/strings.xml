@@ -13,6 +13,8 @@
     <string name="duplicates_none_found">Aucun doublon trouvé.</string>
     <string name="duplicates_group_count">%1$d doublons</string>
     <string name="duplicates_delete_extra">Supprimer les copies en trop</string>
+    <string name="duplicates_delete_all">Tout supprimer en un clic</string>
+    <string name="duplicates_delete_all_reclaimable">Libère %1$s sur %2$d groupes</string>
     <string name="duplicates_permission_rationale">PurgeCore Mobile a besoin d\'accéder à vos photos et vidéos pour trouver les doublons. Rien ne quitte jamais votre appareil.</string>
     <string name="duplicates_grant_permission">Autoriser l\'accès</string>
     <string name="visit_website">Visiter le site PurgeCore</string>
