@@ -28,7 +28,7 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
 </p>
 
 <p align="center">
-  <a href="../../releases/download/mobile-v1.0.8/PurgeCoreMobile-1.0.8.apk">
+  <a href="../../releases/download/mobile-v1.0.9/PurgeCoreMobile-1.0.9.apk">
     <img src="https://img.shields.io/badge/%E2%86%93%20Download-for%20Android-E11D48?style=for-the-badge" alt="Download for Android" />
   </a>
 </p>
