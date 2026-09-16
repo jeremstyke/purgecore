@@ -15,6 +15,7 @@ import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
+import com.jeremstyke.purgecoremobile.ui.components.DonateButton
 import com.jeremstyke.purgecoremobile.ui.components.StorageRing
 import java.text.CharacterIterator
 import java.text.StringCharacterIterator
@@ -98,6 +99,7 @@ fun StorageScreen() {
                     .padding(top = 8.dp, bottom = 16.dp)
                     .clickable { uriHandler.openUri("https://jeremstyke.github.io/purgecore/mobile.html") },
             )
+            DonateButton(modifier = Modifier.padding(bottom = 8.dp))
         }
     }
 }
