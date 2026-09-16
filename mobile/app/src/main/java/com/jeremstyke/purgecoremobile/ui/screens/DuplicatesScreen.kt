@@ -16,11 +16,14 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
+import coil.compose.AsyncImage
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.DuplicateFinder
 import com.jeremstyke.purgecoremobile.data.DuplicateGroup
@@ -151,22 +154,36 @@ fun DuplicatesScreen() {
                             }
                             items(groups) { group ->
                                 Card(shape = RoundedCornerShape(16.dp)) {
-                                    Column(Modifier.padding(16.dp)) {
-                                        Text(
-                                            text = String.format(
-                                                stringResource(R.string.duplicates_group_count),
-                                                group.items.size
-                                            ),
-                                            fontWeight = FontWeight.SemiBold
+                                    Row(
+                                        modifier = Modifier.padding(16.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        AsyncImage(
+                                            model = group.items.first().uri,
+                                            contentDescription = null,
+                                            contentScale = ContentScale.Crop,
+                                            modifier = Modifier
+                                                .size(64.dp)
+                                                .clip(RoundedCornerShape(12.dp))
                                         )
-                                        Text(
-                                            text = "${formatBytes(group.reclaimableBytes)} reclaimable",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                                        )
-                                        Spacer(Modifier.height(12.dp))
-                                        OutlinedButton(onClick = { deleteExtraCopies(group) }) {
-                                            Text(stringResource(R.string.duplicates_delete_extra))
+                                        Spacer(Modifier.width(16.dp))
+                                        Column(Modifier.weight(1f)) {
+                                            Text(
+                                                text = String.format(
+                                                    stringResource(R.string.duplicates_group_count),
+                                                    group.items.size
+                                                ),
+                                                fontWeight = FontWeight.SemiBold
+                                            )
+                                            Text(
+                                                text = "${formatBytes(group.reclaimableBytes)} reclaimable",
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                            )
+                                            Spacer(Modifier.height(12.dp))
+                                            OutlinedButton(onClick = { deleteExtraCopies(group) }) {
+                                                Text(stringResource(R.string.duplicates_delete_extra))
+                                            }
                                         }
                                     }
                                 }
