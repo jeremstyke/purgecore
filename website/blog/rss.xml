@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore Mobile: Install Fixed on Real Devices</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</guid>
+      <category>Mobile</category>
+      <description>The APK had no signing configuration at all, so real Android devices refused to install it. Fixed, and updates now install cleanly too.</description>
+    </item>
+    <item>
       <title>PurgeCore v1.11.5: Two False-Positive Bugs Fixed</title>
       <link>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</guid>

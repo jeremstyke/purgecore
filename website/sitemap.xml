@@ -81,6 +81,16 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-beta-native-ads.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

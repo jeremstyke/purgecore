@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore Mobile : Installation corrigée sur de vrais appareils</title>
+<meta name="description" content="PurgeCore Mobile v1.0.4 corrige un vrai bug : l'APK n'avait aucune configuration de signature, donc les vrais appareils Android refusaient de l'installer.">
+<meta property="og:title" content="PurgeCore Mobile : Installation corrigée sur de vrais appareils">
+<meta property="og:description" content="L'APK n'avait aucune configuration de signature, donc les vrais appareils Android refusaient de l'installer. Corrigé, et les mises à jour s'installeront désormais proprement aussi.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../mobile.html">Mobile</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/purgecore-mobile-signing-fix.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag article-tag-mobile">Mobile</span>
+  </div>
+  <h1>PurgeCore Mobile : Installation corrigée sur de vrais appareils</h1>
+  <p class="article-meta">2026</p>
+
+  <p>Si l'APK refusait de s'installer avec "le package semble ne pas être valide", c'était un vrai bug, pas un problème de votre côté.</p>
+
+  <h2>Ce qui se passait vraiment</h2>
+  <p>Android exige que chaque app soit signée cryptographiquement avant de pouvoir être installée, c'est comme ça que le système sait qu'une mise à jour vient bien du même développeur que l'originale. La configuration de build de PurgeCore Mobile n'avait aucune configuration de signature du tout. Gradle produisait silencieusement un APK techniquement valide mais complètement non signé, que certains émulateurs toléraient mais que les vrais appareils Android rejettent à juste titre.</p>
+
+  <h2>Ce qui est corrigé</h2>
+  <p>Chaque APK de version est désormais signé, avec la même clé à chaque fois. Cette deuxième partie compte tout autant que la première : une nouvelle version peut maintenant s'installer proprement par-dessus la précédente, plutôt que d'exiger une désinstallation d'abord. Ce n'est pas encore un certificat commercial vérifié, donc Android continuera d'afficher que ça vient d'un développeur inconnu, la même situation "éditeur inconnu" que PurgeCore pour Windows tant qu'il n'y a pas de vrai certificat de signature.</p>
+
+  <div class="cta-box">
+    <p>Si vous avez essayé d'installer une version précédente et que ça a échoué, voilà exactement pourquoi, la v1.0.4 et les suivantes devraient s'installer proprement.</p>
+  </div>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger PurgeCore Mobile</h2>
+    <p>Gratuit, v1.0.4, pas encore sur Google Play.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/download/mobile-v1.0.4/PurgeCoreMobile-1.0.4.apk">Télécharger l'APK</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Voir la <a href="../mobile.html">page PurgeCore Mobile</a> pour la liste complète des fonctionnalités et la FAQ.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>
