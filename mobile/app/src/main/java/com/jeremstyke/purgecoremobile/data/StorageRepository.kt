@@ -16,6 +16,7 @@ data class StorageInfo(
 data class MediaBreakdown(
     val photosBytes: Long,
     val videosBytes: Long,
+    val otherBytes: Long,
 )
 
 object StorageRepository {
@@ -30,14 +31,18 @@ object StorageRepository {
     /**
      * How much of that space is photos and videos specifically, using the
      * same media permission already requested for the duplicate finder,
-     * nothing new to ask for. Doesn't cover every category (apps,
-     * documents), just what this app can already see, which is still more
-     * useful than a single undivided total.
+     * nothing new to ask for. The rest (apps, system files, documents,
+     * anything else) is reported as a single "other" bucket rather than
+     * broken down further, Android only exposes a precise per-app
+     * breakdown behind a special permission that would complicate
+     * installing this app and reviewing it for the Play Store, for very
+     * little gained here.
      */
-    fun readMediaBreakdown(context: Context): MediaBreakdown {
+    fun readMediaBreakdown(context: Context, usedBytes: Long): MediaBreakdown {
         val photos = sumMediaSize(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         val videos = sumMediaSize(context, MediaStore.Video.Media.EXTERNAL_CONTENT_URI)
-        return MediaBreakdown(photosBytes = photos, videosBytes = videos)
+        val other = (usedBytes - photos - videos).coerceAtLeast(0L)
+        return MediaBreakdown(photosBytes = photos, videosBytes = videos, otherBytes = other)
     }
 
     private fun sumMediaSize(context: Context, collection: android.net.Uri): Long {

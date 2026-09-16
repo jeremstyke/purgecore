@@ -28,4 +28,7 @@
     <string name="donate_unavailable">Not available right now, try again later.</string>
     <string name="update_available">Update available: v%1$s</string>
     <string name="update_download">Download</string>
+    <string name="storage_breakdown_photos">Photos</string>
+    <string name="storage_breakdown_videos">Videos</string>
+    <string name="storage_breakdown_other">Apps, system &amp; other</string>
 </resources>
