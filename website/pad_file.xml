@@ -31,7 +31,7 @@
 
 <Program_Info>
 <Program_Name>PurgeCore</Program_Name>
-<Program_Version>1.11.5</Program_Version>
+<Program_Version>1.11.6</Program_Version>
 <Program_Release_Month>09</Program_Release_Month>
 <Program_Release_Day>15</Program_Release_Day>
 <Program_Release_Year>2026</Program_Release_Year>
@@ -53,11 +53,11 @@
 
 <Program_System_Requirements>Windows 10 or later, 64-bit (x64)</Program_System_Requirements>
 <Program_Language>ML</Program_Language>
-<Program_Change_Info>Fixed two real false-positive bugs: browser cleanup could wrongly report a browser as open (a single strict lock check misfired on antivirus scanning or search indexing), and the startup manager could keep showing an item as disabled after another program silently re-enabled it. Both now retry or reconcile before reporting a stale state.</Program_Change_Info>
+<Program_Change_Info>Fixed the "What's new?" update banner link always opening the English release notes, even when the app is running in French, now correctly opens the French article when the app is in French.</Program_Change_Info>
 
 <File_Info>
-<File_Size_Bytes>52372895</File_Size_Bytes>
-<File_Size_K>51145</File_Size_K>
+<File_Size_Bytes>52367531</File_Size_Bytes>
+<File_Size_K>51140</File_Size_K>
 <File_Size_MB>49.95</File_Size_MB>
 </File_Info>
 
@@ -96,8 +96,8 @@ PurgeCore has one tier: everything, free, forever. No premium upgrade, no ads in
 </Application_URLs>
 
 <Download_URLs>
-<Primary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.5/PurgeCore-Setup.exe</Primary_Download_URL>
-<Secondary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.5/PurgeCore-Portable.zip</Secondary_Download_URL>
+<Primary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.6/PurgeCore-Setup.exe</Primary_Download_URL>
+<Secondary_Download_URL>https://github.com/jeremstyke/purgecore/releases/download/v1.11.6/PurgeCore-Portable.zip</Secondary_Download_URL>
 <Additional_Download_URL1></Additional_Download_URL1>
 <Additional_Download_URL2></Additional_Download_URL2>
 </Download_URLs>
