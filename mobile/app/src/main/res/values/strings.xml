@@ -26,4 +26,6 @@
     <string name="donate_loading">Loading…</string>
     <string name="donate_thanks">Thank you! That helps both the Windows and Android apps.</string>
     <string name="donate_unavailable">Not available right now, try again later.</string>
+    <string name="update_available">Update available: v%1$s</string>
+    <string name="update_download">Download</string>
 </resources>
