@@ -7,6 +7,13 @@
     <language>en</language>
 
     <item>
+      <title>PurgeCore Mobile: Update Notifications, More Color</title>
+      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-updates-colors.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-updates-colors.html</guid>
+      <category>Mobile</category>
+      <description>Checks for updates on launch and shows a banner when one is ready, plus more color across the app matching PurgeCore for Windows.</description>
+    </item>
+    <item>
       <title>PurgeCore Mobile: Install Fixed on Real Devices</title>
       <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</link>
       <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</guid>

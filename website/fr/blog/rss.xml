@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore Mobile : Notifications de mise à jour, plus de couleur</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-updates-colors.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-updates-colors.html</guid>
+      <category>Mobile</category>
+      <description>Vérifie les mises à jour au lancement et affiche un bandeau quand une est prête, plus de couleur dans toute l'app.</description>
+    </item>
+    <item>
       <title>PurgeCore Mobile : Installation corrigée sur de vrais appareils</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html</guid>
