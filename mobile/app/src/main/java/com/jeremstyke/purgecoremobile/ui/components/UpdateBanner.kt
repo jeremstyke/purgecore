@@ -42,3 +42,4 @@ fun UpdateBanner(latestVersion: String, downloadUrl: String) {
         }
     }
 }
+
