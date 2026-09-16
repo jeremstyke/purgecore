@@ -22,4 +22,8 @@
     <string name="apps_title">Gérer les applications</string>
     <string name="apps_body">Ouvre les paramètres Android pour voir toutes vos applications installées, leur espace utilisé, et les désinstaller si besoin.</string>
     <string name="apps_open_settings">Ouvrir la gestion des applications</string>
+    <string name="donate_button">Soutenir le développement, gratuitement</string>
+    <string name="donate_loading">Chargement…</string>
+    <string name="donate_thanks">Merci ! Ça aide vraiment.</string>
+    <string name="donate_unavailable">Pas disponible pour l\'instant, réessayez plus tard.</string>
 </resources>
