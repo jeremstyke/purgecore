@@ -1,5 +1,6 @@
 package com.jeremstyke.purgecoremobile.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -7,6 +8,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -15,12 +17,14 @@ import com.jeremstyke.purgecoremobile.BuildConfig
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.data.MobileUpdateChecker
 import com.jeremstyke.purgecoremobile.data.MobileUpdateInfo
+import com.jeremstyke.purgecoremobile.data.MediaBreakdown
 import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import com.jeremstyke.purgecoremobile.ui.components.DonateButton
 import com.jeremstyke.purgecoremobile.ui.components.StorageRing
 import com.jeremstyke.purgecoremobile.ui.components.UpdateBanner
+import com.jeremstyke.purgecoremobile.ui.theme.Amber
 import com.jeremstyke.purgecoremobile.ui.theme.Teal
 import com.jeremstyke.purgecoremobile.ui.theme.Violet
 import java.text.CharacterIterator
@@ -41,11 +45,15 @@ fun formatBytes(bytes: Long): String {
 @Composable
 fun StorageScreen() {
     var storageInfo by remember { mutableStateOf<StorageInfo?>(null) }
+    var mediaBreakdown by remember { mutableStateOf<MediaBreakdown?>(null) }
     val uriHandler = LocalUriHandler.current
+    val context = LocalContext.current
     var updateInfo by remember { mutableStateOf<MobileUpdateInfo?>(null) }
 
     LaunchedEffect(Unit) {
-        storageInfo = StorageRepository.readStorageInfo()
+        val info = StorageRepository.readStorageInfo()
+        storageInfo = info
+        mediaBreakdown = StorageRepository.readMediaBreakdown(context, info.usedBytes)
     }
 
     LaunchedEffect(Unit) {
@@ -94,6 +102,30 @@ fun StorageScreen() {
                 CircularProgressIndicator()
             }
         }
+            mediaBreakdown?.let { breakdown ->
+                Spacer(Modifier.height(16.dp))
+                Card(shape = RoundedCornerShape(16.dp)) {
+                    Column(Modifier.padding(20.dp)) {
+                        BreakdownRow(
+                            color = Teal,
+                            label = stringResource(R.string.storage_breakdown_photos),
+                            bytes = breakdown.photosBytes
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        BreakdownRow(
+                            color = Violet,
+                            label = stringResource(R.string.storage_breakdown_videos),
+                            bytes = breakdown.videosBytes
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        BreakdownRow(
+                            color = Amber,
+                            label = stringResource(R.string.storage_breakdown_other),
+                            bytes = breakdown.otherBytes
+                        )
+                    }
+                }
+            }
             Spacer(Modifier.weight(1f))
             Text(
                 text = stringResource(R.string.report_bug),
@@ -119,5 +151,22 @@ fun StorageScreen() {
             )
             DonateButton(modifier = Modifier.padding(bottom = 8.dp))
         }
+    }
+}
+
+@Composable
+private fun BreakdownRow(color: androidx.compose.ui.graphics.Color, label: String, bytes: Long) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            modifier = Modifier
+                .size(12.dp)
+                .background(color, shape = androidx.compose.foundation.shape.CircleShape)
+        )
+        Spacer(Modifier.width(12.dp))
+        Text(text = label, modifier = Modifier.weight(1f))
+        Text(text = formatBytes(bytes), fontWeight = FontWeight.SemiBold)
     }
 }
