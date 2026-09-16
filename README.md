@@ -6,7 +6,7 @@
 [![.NET](https://img.shields.io/badge/.NET-8-512BD4)](#)
 [![Build](https://img.shields.io/github/actions/workflow/status/jeremstyke/purgecore/build.yml?branch=main)](../../actions)
 [![Release](https://img.shields.io/github/v/release/jeremstyke/purgecore)](../../releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/jeremstyke/purgecore/total)](../../releases)
+[![Downloads](https://img.shields.io/github/downloads/jeremstyke/purgecore/total?label=downloads%20%28all%20platforms%29)](../../releases)
 
 **A complete, 100% free PC cleaner for Windows. Currently in beta.**
 Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. Nothing is ever sent anywhere, a privacy-first alternative to CCleaner and similar tools.

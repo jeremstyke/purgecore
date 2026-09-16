@@ -364,28 +364,33 @@
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (releases) {
       if (!releases || !releases.length) return;
-      var total = 0;
+
+      var windowsTotal = 0, androidTotal = 0;
+      var latestWindowsTag = null;
       releases.forEach(function (release) {
+        var isMobile = (release.tag_name || '').indexOf('mobile-') === 0;
+        var releaseTotal = 0;
         (release.assets || []).forEach(function (asset) {
-          total += asset.download_count || 0;
+          releaseTotal += asset.download_count || 0;
         });
+        if (isMobile) {
+          androidTotal += releaseTotal;
+        } else {
+          windowsTotal += releaseTotal;
+          if (!latestWindowsTag) latestWindowsTag = release.tag_name;
+        }
       });
+
       var note = document.getElementById('download-count-note');
-      if (note && total > 0) {
-        note.textContent = total.toLocaleString('fr-FR') + ' téléchargements à ce jour, toutes versions confondues.';
+      if (note && (windowsTotal > 0 || androidTotal > 0)) {
+        note.textContent = windowsTotal.toLocaleString('fr-FR') + ' téléchargements Windows, '
+          + androidTotal.toLocaleString('fr-FR') + ' téléchargements Android.';
       }
+
+      var versionNote = document.getElementById('latest-version-note');
+      if (versionNote && latestWindowsTag) versionNote.textContent += ', ' + latestWindowsTag;
     })
     .catch(function () { /* hors ligne ou limite atteinte : laisser vide */ });
-</script>
-<script>
-  fetch('https://api.github.com/repos/jeremstyke/purgecore/releases/latest')
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (data) {
-      if (!data || !data.tag_name) return;
-      var note = document.getElementById('latest-version-note');
-      if (note) note.textContent += ', ' + data.tag_name;
-    })
-    .catch(function () { /* offline or rate-limited: leave the plain label */ });
 </script>
 <script src="../assets/animations.js" defer></script>
 </body>

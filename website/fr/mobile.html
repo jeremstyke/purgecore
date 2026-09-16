@@ -55,6 +55,7 @@
       <div style="margin-top:24px;">
         <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/download/mobile-v1.0.3/PurgeCoreMobile-1.0.3.apk">Télécharger l'APK</a>
         <span class="btn-note" style="display:block; margin-top:10px; color:var(--ink-muted); font-size:13px;">Gratuit, v1.0.3, pas encore sur Google Play</span>
+        <p id="android-download-count-note" style="margin-top:8px; font-size:13px; color:var(--ink-muted);"></p>
       </div>
       <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Pas l'app Windows ? <a href="index.html">PurgeCore pour Windows est ici</a>.</p>
     </div>
@@ -135,6 +136,25 @@
   </div>
 </footer>
 
+<script>
+  fetch('https://api.github.com/repos/jeremstyke/purgecore/releases')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (releases) {
+      if (!releases || !releases.length) return;
+      var androidTotal = 0;
+      releases.forEach(function (release) {
+        if ((release.tag_name || '').indexOf('mobile-') !== 0) return;
+        (release.assets || []).forEach(function (asset) {
+          androidTotal += asset.download_count || 0;
+        });
+      });
+      var note = document.getElementById('android-download-count-note');
+      if (note && androidTotal > 0) {
+        note.textContent = androidTotal.toLocaleString('fr-FR') + ' téléchargements Android à ce jour.';
+      }
+    })
+    .catch(function () { /* hors ligne ou limite atteinte : laisser vide */ });
+</script>
 <script src="../assets/animations.js" defer></script>
 </body>
 </html>
