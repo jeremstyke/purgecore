@@ -3,7 +3,9 @@ package com.jeremstyke.purgecoremobile.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -22,8 +24,10 @@ import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import com.jeremstyke.purgecoremobile.ui.components.DonateButton
+import com.jeremstyke.purgecoremobile.ui.components.RingSegment
 import com.jeremstyke.purgecoremobile.ui.components.StorageRing
 import com.jeremstyke.purgecoremobile.ui.components.UpdateBanner
+import com.jeremstyke.purgecoremobile.ui.theme.Accent
 import com.jeremstyke.purgecoremobile.ui.theme.Amber
 import com.jeremstyke.purgecoremobile.ui.theme.Teal
 import com.jeremstyke.purgecoremobile.ui.theme.Violet
@@ -71,6 +75,7 @@ fun StorageScreen() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState())
                 .padding(24.dp)
         ) {
             storageInfo?.let { info ->
@@ -80,18 +85,29 @@ fun StorageScreen() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     StorageRing(
-                        usedFraction = info.usedFraction,
+                        segments = mediaBreakdown?.let { breakdown ->
+                            listOf(
+                                RingSegment(breakdown.photosBytes, Teal),
+                                RingSegment(breakdown.videosBytes, Violet),
+                                RingSegment(breakdown.otherBytes, Amber),
+                            )
+                        } ?: listOf(RingSegment(info.usedBytes, Accent)),
+                        totalBytes = info.totalBytes,
                         centerLabel = "${(info.usedFraction * 100).toInt()}%"
                     )
                     Spacer(Modifier.height(16.dp))
                     Text(
-                        "${formatBytes(info.usedBytes)} used of ${formatBytes(info.totalBytes)}",
+                        String.format(
+                            stringResource(R.string.storage_used_of_total),
+                            formatBytes(info.usedBytes),
+                            formatBytes(info.totalBytes)
+                        ),
                         style = MaterialTheme.typography.bodyMedium,
                         color = Teal,
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
-                        "${formatBytes(info.freeBytes)} free",
+                        String.format(stringResource(R.string.storage_free), formatBytes(info.freeBytes)),
                         style = MaterialTheme.typography.bodySmall,
                         color = Violet
                     )
@@ -126,7 +142,7 @@ fun StorageScreen() {
                     }
                 }
             }
-            Spacer(Modifier.weight(1f))
+            Spacer(Modifier.height(24.dp))
             Text(
                 text = stringResource(R.string.report_bug),
                 style = MaterialTheme.typography.bodySmall,
