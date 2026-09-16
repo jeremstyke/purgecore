@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore Mobile : Ce qui utilise vraiment votre stockage</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html</guid>
+      <category>Mobile</category>
+      <description>Affiche une répartition du stockage par catégorie : photos, vidéos, et le reste.</description>
+    </item>
+    <item>
       <title>PurgeCore Mobile : Notifications de mise à jour, plus de couleur</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-updates-colors.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-updates-colors.html</guid>

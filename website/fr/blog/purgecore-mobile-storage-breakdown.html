@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PurgeCore Mobile : Ce qui utilise vraiment votre stockage</title>
+<meta name="description" content="PurgeCore Mobile affiche désormais une répartition du stockage par catégorie : photos, vidéos, et le reste, directement sur l'écran Stockage.">
+<meta property="og:title" content="PurgeCore Mobile : Ce qui utilise vraiment votre stockage">
+<meta property="og:description" content="Affiche une répartition du stockage par catégorie : photos, vidéos, et le reste, directement sur l'écran Stockage.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jeremstyke.github.io/purgecore/assets/og-image-icon.png">
+<meta property="og:url" content="https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html">
+<link rel="canonical" href="https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html">
+<link rel="icon" type="image/png" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Blog PurgeCore" href="rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="12" stroke="#E2E8F0" stroke-width="5" fill="none"/>
+        <circle cx="16" cy="16" r="12" stroke="#2563EB" stroke-width="5" fill="none" stroke-linecap="round"
+                stroke-dasharray="30.2 45.2" transform="rotate(-90 16 16)"/>
+      </svg>
+      PurgeCore
+      <span class="beta-badge">BETA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../mobile.html">Mobile</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../about.html">À propos</a>
+      <a href="./">Blog</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="github-link" href="https://github.com/jeremstyke/purgecore">GitHub</a>
+      <a class="coffee-link" href="https://jeremstyke.gumroad.com/coffee">☕ Offrir un café</a>
+      <div class="lang-switch"><a href="../../blog/purgecore-mobile-storage-breakdown.html">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <a class="back-link" href="./">&larr; Retour au blog</a>
+
+  <div class="article-header">
+    <span class="article-tag article-tag-mobile">Mobile</span>
+  </div>
+  <h1>PurgeCore Mobile : Ce qui utilise vraiment votre stockage</h1>
+  <p class="article-meta">2026</p>
+
+  <h2>Nouveau : le stockage par catégorie</h2>
+  <p>L'écran Stockage affichait jusqu'ici un simple partage utilisé/libre, utile mais pas très parlant en soi. Il se décompose désormais en photos, vidéos, et une catégorie combinée "apps, système et autre", chacune avec sa taille et sa couleur.</p>
+
+  <h2>Pourquoi apps et système sont regroupés</h2>
+  <p>Android n'expose une répartition exacte par app que derrière une permission spéciale nécessitant une autorisation manuelle en dehors de l'app, le même genre de complexité qui avait mené à ouvrir les paramètres système d'Android pour l'onglet Apps plutôt que de réimplémenter une liste. Plutôt que de demander cette permission pour un seul écran, cette catégorie est calculée comme ce qui reste une fois les photos et vidéos comptées, ce qui reste honnête sur ce qu'elle représente : tout ce qui n'est pas du média, pas un chiffre précis app par app.</p>
+
+  <div class="download-band" style="margin-top:48px;">
+    <h2>Télécharger PurgeCore Mobile</h2>
+    <p>Gratuit, v1.1.0, pas encore sur Google Play.</p>
+    <a class="btn btn-primary" href="https://github.com/jeremstyke/purgecore/releases/download/mobile-v1.1.0/PurgeCoreMobile-1.1.0.apk">Télécharger l'APK</a>
+    <p style="margin-top:16px; font-size:13px; color:var(--ink-muted);">Voir la <a href="../mobile.html">page PurgeCore Mobile</a> pour la liste complète des fonctionnalités et la FAQ.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>&copy; 2026 Jeremy Jury. Tous droits réservés. Si PurgeCore vous est utile, vous pouvez <a href="https://jeremstyke.gumroad.com/coffee">offrir un café</a>.</div>
+    <div class="disclosure">PurgeCore peut recommander des produits via des liens affiliés, clairement identifiés là où ils apparaissent dans l'application. Cela n'affecte jamais ce que l'application elle-même vous coûte.</div>
+  </div>
+</footer>
+
+<script src="../../assets/animations.js" defer></script>
+</body>
+</html>
