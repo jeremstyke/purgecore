@@ -16,9 +16,26 @@ android {
         versionName = "1.0.0"
     }
 
+    signingConfigs {
+        create("release") {
+            // No commercial release certificate yet, same situation as the
+            // Windows app: this keystore isn't a verified commercial
+            // identity, it exists so every release is signed with the same
+            // key, which Android requires for a new version to install as
+            // an update over the previous one rather than needing an
+            // uninstall first. Committed to the repo deliberately, it's not
+            // standing in for a real production certificate.
+            storeFile = file("../keystore/purgecore-mobile.keystore")
+            storePassword = "PurgeCoreMobile2026"
+            keyAlias = "purgecoremobile"
+            keyPassword = "PurgeCoreMobile2026"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
