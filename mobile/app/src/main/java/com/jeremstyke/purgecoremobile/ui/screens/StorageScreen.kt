@@ -21,6 +21,8 @@ import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import com.jeremstyke.purgecoremobile.ui.components.DonateButton
 import com.jeremstyke.purgecoremobile.ui.components.StorageRing
 import com.jeremstyke.purgecoremobile.ui.components.UpdateBanner
+import com.jeremstyke.purgecoremobile.ui.theme.Teal
+import com.jeremstyke.purgecoremobile.ui.theme.Violet
 import java.text.CharacterIterator
 import java.text.StringCharacterIterator
 
@@ -76,12 +78,14 @@ fun StorageScreen() {
                     Spacer(Modifier.height(16.dp))
                     Text(
                         "${formatBytes(info.usedBytes)} used of ${formatBytes(info.totalBytes)}",
-                        style = MaterialTheme.typography.bodyMedium
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = Teal,
+                        fontWeight = FontWeight.SemiBold
                     )
                     Text(
                         "${formatBytes(info.freeBytes)} free",
                         style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        color = Violet
                     )
                 }
             }

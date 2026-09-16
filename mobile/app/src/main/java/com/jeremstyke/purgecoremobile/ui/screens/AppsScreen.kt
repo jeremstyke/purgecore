@@ -3,6 +3,7 @@ package com.jeremstyke.purgecoremobile.ui.screens
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -16,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.jeremstyke.purgecoremobile.R
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
+import com.jeremstyke.purgecoremobile.ui.theme.Amber
 
 /**
  * Rather than reimplementing an app list (which needs the sensitive
@@ -35,7 +37,10 @@ fun AppsScreen() {
                 .fillMaxSize()
                 .padding(24.dp)
         ) {
-            Card(shape = RoundedCornerShape(16.dp)) {
+            Card(
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(2.dp, Amber)
+            ) {
                 Column(Modifier.padding(20.dp)) {
                     Text(
                         text = stringResource(R.string.apps_body),

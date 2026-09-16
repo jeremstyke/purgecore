@@ -8,6 +8,7 @@ import android.provider.MediaStore
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -29,6 +30,7 @@ import com.jeremstyke.purgecoremobile.data.DuplicateFinder
 import com.jeremstyke.purgecoremobile.data.DuplicateGroup
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import com.jeremstyke.purgecoremobile.ui.components.NativeAdCard
+import com.jeremstyke.purgecoremobile.ui.theme.Rose
 import kotlinx.coroutines.launch
 
 private fun mediaPermissions(): Array<String> =
@@ -175,7 +177,10 @@ fun DuplicatesScreen() {
                     groups.isNotEmpty() -> {
                         LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             item {
-                                Card(shape = RoundedCornerShape(16.dp)) {
+                                Card(
+                                    shape = RoundedCornerShape(16.dp),
+                                    border = BorderStroke(2.dp, Rose)
+                                ) {
                                     Column(Modifier.padding(16.dp)) {
                                         Button(
                                             onClick = { deleteAllExtraCopies() },
