@@ -76,4 +76,8 @@ dependencies {
     // AdMob, per the roadmap decision to monetize this app with rewarded/
     // banner ads rather than any paywall.
     implementation("com.google.android.gms:play-services-ads:23.6.0")
+
+    // Coil, for loading actual photo thumbnails in the duplicates list
+    // rather than a plain text summary.
+    implementation("io.coil-kt:coil-compose:2.6.0")
 }
