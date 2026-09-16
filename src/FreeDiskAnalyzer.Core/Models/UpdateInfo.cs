@@ -11,8 +11,16 @@ public sealed record UpdateInfo(bool IsUpdateAvailable, string? LatestVersion, s
     /// blind. Follows the site's naming convention (dots to dashes, e.g.
     /// "1.9.1" -> "v1-9-1-release-notes.html"), matches every article
     /// published so far but isn't guaranteed to exist for every release.
+    /// English by default; pass isFrench: true for the French version of
+    /// the same article, at fr/blog/ instead of blog/, so a French-language
+    /// install of the app doesn't send someone back to the English article
+    /// every time.
     /// </summary>
-    public string? BlogArticleUrl => LatestVersion is { } version
-        ? $"https://jeremstyke.github.io/purgecore/blog/v{version.Replace('.', '-')}-release-notes.html"
+    public string? GetBlogArticleUrl(bool isFrench = false) => LatestVersion is { } version
+        ? isFrench
+            ? $"https://jeremstyke.github.io/purgecore/fr/blog/v{version.Replace('.', '-')}-release-notes.html"
+            : $"https://jeremstyke.github.io/purgecore/blog/v{version.Replace('.', '-')}-release-notes.html"
         : null;
+
+    public string? BlogArticleUrl => GetBlogArticleUrl();
 }

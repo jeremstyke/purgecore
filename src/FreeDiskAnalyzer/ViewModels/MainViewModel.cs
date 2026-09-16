@@ -123,7 +123,8 @@ public sealed partial class MainViewModel : ObservableObject
     [RelayCommand]
     private void OpenWhatsNew()
     {
-        if (_updateInfo?.BlogArticleUrl is not { } url) return;
+        var isFrench = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fr";
+        if (_updateInfo?.GetBlogArticleUrl(isFrench) is not { } url) return;
         Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
     }
 
