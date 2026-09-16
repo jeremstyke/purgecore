@@ -22,8 +22,8 @@
     <string name="apps_title">Manage Apps</string>
     <string name="apps_body">Opens Android\'s own app settings to see all your installed apps, how much space each uses, and uninstall the ones you don\'t need.</string>
     <string name="apps_open_settings">Open app management</string>
-    <string name="donate_button">Support development, free</string>
+    <string name="donate_button">Support PurgeCore (Windows &amp; Android), free</string>
     <string name="donate_loading">Loading…</string>
-    <string name="donate_thanks">Thank you! That really helps.</string>
+    <string name="donate_thanks">Thank you! That helps both the Windows and Android apps.</string>
     <string name="donate_unavailable">Not available right now, try again later.</string>
 </resources>
