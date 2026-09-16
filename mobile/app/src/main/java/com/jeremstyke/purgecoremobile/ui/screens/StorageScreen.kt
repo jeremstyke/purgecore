@@ -11,12 +11,16 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.jeremstyke.purgecoremobile.BuildConfig
 import com.jeremstyke.purgecoremobile.R
+import com.jeremstyke.purgecoremobile.data.MobileUpdateChecker
+import com.jeremstyke.purgecoremobile.data.MobileUpdateInfo
 import com.jeremstyke.purgecoremobile.data.StorageInfo
 import com.jeremstyke.purgecoremobile.data.StorageRepository
 import com.jeremstyke.purgecoremobile.ui.components.BrandHeader
 import com.jeremstyke.purgecoremobile.ui.components.DonateButton
 import com.jeremstyke.purgecoremobile.ui.components.StorageRing
+import com.jeremstyke.purgecoremobile.ui.components.UpdateBanner
 import java.text.CharacterIterator
 import java.text.StringCharacterIterator
 
@@ -36,12 +40,22 @@ fun formatBytes(bytes: Long): String {
 fun StorageScreen() {
     var storageInfo by remember { mutableStateOf<StorageInfo?>(null) }
     val uriHandler = LocalUriHandler.current
+    var updateInfo by remember { mutableStateOf<MobileUpdateInfo?>(null) }
 
     LaunchedEffect(Unit) {
         storageInfo = StorageRepository.readStorageInfo()
     }
 
+    LaunchedEffect(Unit) {
+        updateInfo = MobileUpdateChecker.checkForUpdate(BuildConfig.VERSION_NAME)
+    }
+
     Column(modifier = Modifier.fillMaxSize()) {
+        updateInfo?.let { info ->
+            if (info.isUpdateAvailable && info.latestVersion != null && info.downloadUrl != null) {
+                UpdateBanner(latestVersion = info.latestVersion, downloadUrl = info.downloadUrl)
+            }
+        }
         BrandHeader(title = stringResource(R.string.storage_title))
 
         Column(
