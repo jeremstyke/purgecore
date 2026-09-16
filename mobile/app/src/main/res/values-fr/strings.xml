@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PurgeCore Mobile (Bêta)</string>
+    <string name="nav_storage">Stockage</string>
+    <string name="nav_duplicates">Doublons</string>
+    <string name="nav_apps">Apps</string>
+    <string name="storage_title">Votre stockage</string>
+    <string name="storage_used_of_total">%1$s utilisés sur %2$s</string>
+    <string name="storage_free">%1$s libres</string>
+    <string name="duplicates_title">Photos et vidéos en double</string>
+    <string name="duplicates_body">Trouve les photos et vidéos au contenu identique, pour libérer de l\'espace sans rien perdre d\'unique.</string>
+    <string name="duplicates_scan">Chercher les doublons</string>
+    <string name="duplicates_scanning">Analyse de votre médiathèque…</string>
+    <string name="duplicates_none_found">Aucun doublon trouvé.</string>
+    <string name="duplicates_group_count">%1$d doublons</string>
+    <string name="duplicates_delete_extra">Supprimer les copies en trop</string>
+    <string name="duplicates_permission_rationale">PurgeCore Mobile a besoin d\'accéder à vos photos et vidéos pour trouver les doublons. Rien ne quitte jamais votre appareil.</string>
+    <string name="duplicates_grant_permission">Autoriser l\'accès</string>
+    <string name="visit_website">Visiter le site PurgeCore</string>
+    <string name="report_bug">Signaler un bug</string>
+    <string name="apps_title">Gérer les applications</string>
+    <string name="apps_body">Ouvre les paramètres Android pour voir toutes vos applications installées, leur espace utilisé, et les désinstaller si besoin.</string>
+    <string name="apps_open_settings">Ouvrir la gestion des applications</string>
+</resources>

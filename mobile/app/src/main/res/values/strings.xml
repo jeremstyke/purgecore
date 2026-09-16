@@ -2,6 +2,7 @@
     <string name="app_name">PurgeCore Mobile (Beta)</string>
     <string name="nav_storage">Storage</string>
     <string name="nav_duplicates">Duplicate Photos</string>
+    <string name="nav_apps">Apps</string>
     <string name="storage_title">Your storage</string>
     <string name="storage_used_of_total">%1$s used of %2$s</string>
     <string name="storage_free">%1$s free</string>
@@ -16,4 +17,7 @@
     <string name="duplicates_grant_permission">Grant access</string>
     <string name="visit_website">Visit the PurgeCore website</string>
     <string name="report_bug">Report a bug</string>
+    <string name="apps_title">Manage Apps</string>
+    <string name="apps_body">Opens Android's own app settings to see all your installed apps, how much space each uses, and uninstall the ones you don't need.</string>
+    <string name="apps_open_settings">Open app management</string>
 </resources>
