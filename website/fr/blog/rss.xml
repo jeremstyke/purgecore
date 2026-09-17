@@ -7,6 +7,13 @@
     <language>fr</language>
 
     <item>
+      <title>PurgeCore v1.11.7 : Un anneau de stockage multicolore</title>
+      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-7-release-notes.html</link>
+      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-7-release-notes.html</guid>
+      <category>Release notes</category>
+      <description>L'anneau de stockage du tableau de bord affiche désormais un arc coloré par catégorie.</description>
+    </item>
+    <item>
       <title>PurgeCore Mobile : Ce qui utilise vraiment votre stockage</title>
       <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html</link>
       <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html</guid>
