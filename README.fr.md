@@ -21,7 +21,7 @@ Analyse de disque, doublons, nettoyage navigateurs et PC, gestion démarrage et 
 </p>
 
 <p align="center">
-  <a href="../../releases/download/v1.11.6/PurgeCore-Setup.exe">
+  <a href="../../releases/download/v1.11.7/PurgeCore-Setup.exe">
     <img src="https://img.shields.io/badge/%E2%86%93%20T%C3%A9l%C3%A9charger-pour%20Windows-2563EB?style=for-the-badge" alt="Télécharger pour Windows" />
   </a>
 </p>
@@ -32,7 +32,7 @@ Analyse de disque, doublons, nettoyage navigateurs et PC, gestion démarrage et 
   </a>
 </p>
 
-<p align="center"><sub>Utilisateur avancé ? <a href="../../releases/download/v1.11.6/PurgeCore-Portable.zip">Téléchargez la version portable</a>, pas d'installation, pas besoin de droits admin. · Annuaire de logiciels ? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">Fichier PAD ici</a>.</sub></p>
+<p align="center"><sub>Utilisateur avancé ? <a href="../../releases/download/v1.11.7/PurgeCore-Portable.zip">Téléchargez la version portable</a>, pas d'installation, pas besoin de droits admin. · Annuaire de logiciels ? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">Fichier PAD ici</a>.</sub></p>
 
 > [Voir toutes les versions](../../releases)
 
