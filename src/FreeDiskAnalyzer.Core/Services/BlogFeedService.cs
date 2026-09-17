@@ -6,8 +6,8 @@ namespace FreeDiskAnalyzer.Core.Services;
 
 public sealed class BlogFeedService : IBlogFeedService
 {
-    public const string EnglishFeedUrl = "https://jeremstyke.github.io/purgecore/blog/rss.xml";
-    public const string FrenchFeedUrl = "https://jeremstyke.github.io/purgecore/fr/blog/rss.xml";
+    public const string EnglishFeedUrl = "https://getpurgecore.com/blog/rss.xml";
+    public const string FrenchFeedUrl = "https://getpurgecore.com/fr/blog/rss.xml";
 
     public async Task<IReadOnlyList<BlogPost>> GetLatestPostsAsync(string feedUrl, int count, CancellationToken cancellationToken = default)
     {

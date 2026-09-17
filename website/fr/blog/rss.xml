@@ -2,154 +2,154 @@
 <rss version="2.0">
   <channel>
     <title>Blog PurgeCore</title>
-    <link>https://jeremstyke.github.io/purgecore/fr/blog/</link>
+    <link>https://getpurgecore.com/fr/blog/</link>
     <description>Guides, comparaisons et notes de version pour PurgeCore.</description>
     <language>fr</language>
 
     <item>
       <title>PurgeCore v1.11.7 : Un anneau de stockage multicolore</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-7-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-7-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-7-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-7-release-notes.html</guid>
       <category>Release notes</category>
       <description>L'anneau de stockage du tableau de bord affiche désormais un arc coloré par catégorie.</description>
     </item>
     <item>
       <title>PurgeCore Mobile : Ce qui utilise vraiment votre stockage</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-storage-breakdown.html</guid>
+      <link>https://getpurgecore.com/fr/blog/purgecore-mobile-storage-breakdown.html</link>
+      <guid>https://getpurgecore.com/fr/blog/purgecore-mobile-storage-breakdown.html</guid>
       <category>Mobile</category>
       <description>Affiche une répartition du stockage par catégorie : photos, vidéos, et le reste.</description>
     </item>
     <item>
       <title>PurgeCore Mobile : Notifications de mise à jour, plus de couleur</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-updates-colors.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-updates-colors.html</guid>
+      <link>https://getpurgecore.com/fr/blog/purgecore-mobile-updates-colors.html</link>
+      <guid>https://getpurgecore.com/fr/blog/purgecore-mobile-updates-colors.html</guid>
       <category>Mobile</category>
       <description>Vérifie les mises à jour au lancement et affiche un bandeau quand une est prête, plus de couleur dans toute l'app.</description>
     </item>
     <item>
       <title>PurgeCore Mobile : Installation corrigée sur de vrais appareils</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-signing-fix.html</guid>
+      <link>https://getpurgecore.com/fr/blog/purgecore-mobile-signing-fix.html</link>
+      <guid>https://getpurgecore.com/fr/blog/purgecore-mobile-signing-fix.html</guid>
       <category>Mobile</category>
       <description>L'APK n'avait aucune configuration de signature, donc les vrais appareils Android refusaient de l'installer. Corrigé.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.5 : Deux faux positifs corrigés</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-5-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-5-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-5-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-5-release-notes.html</guid>
       <category>Release notes</category>
       <description>Le nettoyage navigateur qui signalait à tort un navigateur ouvert, et le gestionnaire de démarrage qui affichait un état périmé, tous deux corrigés.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.4 : Liens de téléchargement corrigés</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-4-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-4-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-4-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-4-release-notes.html</guid>
       <category>Release notes</category>
       <description>Le bouton de téléchargement du site et la vérification de mise à jour de l'app étaient tous deux silencieusement cassés depuis l'arrivée de PurgeCore Mobile dans ce dépôt.</description>
     </item>
     <item>
       <title>PurgeCore Mobile : Bêta plus visible, un second format publicitaire</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-beta-native-ads.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-beta-native-ads.html</guid>
+      <link>https://getpurgecore.com/fr/blog/purgecore-mobile-beta-native-ads.html</link>
+      <guid>https://getpurgecore.com/fr/blog/purgecore-mobile-beta-native-ads.html</guid>
       <category>Mobile</category>
       <description>Clairement marqué comme Bêta partout, et une carte publicitaire native ajoutée en plus de la bannière existante.</description>
     </item>
     <item>
       <title>PurgeCore Mobile : comment c'est financé</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-funding.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/purgecore-mobile-funding.html</guid>
+      <link>https://getpurgecore.com/fr/blog/purgecore-mobile-funding.html</link>
+      <guid>https://getpurgecore.com/fr/blog/purgecore-mobile-funding.html</guid>
       <category>Mobile</category>
       <description>Gratuit, financé par une seule bannière publicitaire et rien d'autre. Aucun paywall, aucune donnée vendue.</description>
     </item>
     <item>
       <title>Présentation de PurgeCore Mobile</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/introducing-purgecore-mobile.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/introducing-purgecore-mobile.html</guid>
+      <link>https://getpurgecore.com/fr/blog/introducing-purgecore-mobile.html</link>
+      <guid>https://getpurgecore.com/fr/blog/introducing-purgecore-mobile.html</guid>
       <category>Mobile</category>
       <description>Une app compagnon Android gratuite avec un aperçu du stockage et un détecteur de photos et vidéos en double.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.3 : Corrections des sélecteurs de disque</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-3-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-3-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-3-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-3-release-notes.html</guid>
       <category>Release notes</category>
       <description>Le style des listes déroulantes de disque et un bug d'affichage corrigés, Santé de la batterie ajoutée à la documentation.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.2 : Onglets invisibles corrigés</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-2-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-2-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-2-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-2-release-notes.html</guid>
       <category>Release notes</category>
       <description>Les sous-onglets de Nettoyage et Explorer s'affichaient en texte blanc sur fond blanc, confirmé par une capture d'écran et corrigé.</description>
     </item>
     <item>
       <title>Meilleures alternatives gratuites à CCleaner en 2026</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/best-ccleaner-alternatives.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/best-ccleaner-alternatives.html</guid>
+      <link>https://getpurgecore.com/fr/blog/best-ccleaner-alternatives.html</link>
+      <guid>https://getpurgecore.com/fr/blog/best-ccleaner-alternatives.html</guid>
       <category>Guide</category>
       <description>Un regard honnête sur PurgeCore, BleachBit et WinDirStat, ce que chacun fait de mieux, et lequel correspond à votre situation.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.1 : Un risque de blocage latent corrigé</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-1-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-1-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-1-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-1-release-notes.html</guid>
       <category>Release notes</category>
       <description>Un piège classique .NET dans Santé de la batterie et Vider le cache DNS, trouvé lors d'un audit, corrigé avant qu'il ne pose problème.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.0 : Santé de la batterie</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/v1-11-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/fr/blog/v1-11-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/fr/blog/v1-11-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>PurgeCore v1.11.0 ajoute un onglet Batterie, générant le rapport de diagnostic de batterie propre à Windows en un clic. Masqué automatiquement sur les PC de bureau.</description>
     </item>
     <item>
       <title>PurgeCore a maintenant un fichier PAD</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/pad-file-available.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/pad-file-available.html</guid>
+      <link>https://getpurgecore.com/fr/blog/pad-file-available.html</link>
+      <guid>https://getpurgecore.com/fr/blog/pad-file-available.html</guid>
       <category>Annonce</category>
       <description>PurgeCore publie un fichier PAD (Portable Application Description), pour que les annuaires de logiciels puissent le référencer automatiquement avec des informations exactes et à jour.</description>
     </item>
     <item>
       <title>Free Disk Analyzer devient PurgeCore</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/renamed-to-purgecore.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/renamed-to-purgecore.html</guid>
+      <link>https://getpurgecore.com/fr/blog/renamed-to-purgecore.html</link>
+      <guid>https://getpurgecore.com/fr/blog/renamed-to-purgecore.html</guid>
       <category>Annonce</category>
       <description>Free Disk Analyzer a été renommé en PurgeCore. Même application, mêmes fonctionnalités, toujours gratuit pour toujours, même téléchargement, juste un nouveau nom.</description>
     </item>
     <item>
       <title>PurgeCore vs CCleaner : lequel choisir ?</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/free-disk-analyzer-vs-ccleaner.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/free-disk-analyzer-vs-ccleaner.html</guid>
+      <link>https://getpurgecore.com/fr/blog/free-disk-analyzer-vs-ccleaner.html</link>
+      <guid>https://getpurgecore.com/fr/blog/free-disk-analyzer-vs-ccleaner.html</guid>
       <category>Comparaison</category>
       <description>Une comparaison honnête entre PurgeCore et CCleaner : ce que chacun fait bien, où CCleaner garde une avance, et où un nettoyeur de registre et des offres payantes changent la donne.</description>
     </item>
     <item>
       <title>PurgeCore vs BleachBit : lequel choisir ?</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/free-disk-analyzer-vs-bleachbit.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/free-disk-analyzer-vs-bleachbit.html</guid>
+      <link>https://getpurgecore.com/fr/blog/free-disk-analyzer-vs-bleachbit.html</link>
+      <guid>https://getpurgecore.com/fr/blog/free-disk-analyzer-vs-bleachbit.html</guid>
       <category>Comparaison</category>
       <description>Une comparaison honnête entre PurgeCore et BleachBit : nettoyage open source axé confidentialité versus analyse d'espace disque, et où chacun est le meilleur choix.</description>
     </item>
     <item>
       <title>PurgeCore vs WinDirStat : lequel choisir ?</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/free-disk-analyzer-vs-windirstat.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/free-disk-analyzer-vs-windirstat.html</guid>
+      <link>https://getpurgecore.com/fr/blog/free-disk-analyzer-vs-windirstat.html</link>
+      <guid>https://getpurgecore.com/fr/blog/free-disk-analyzer-vs-windirstat.html</guid>
       <category>Comparaison</category>
       <description>Une comparaison honnête entre PurgeCore et WinDirStat : visualisation en treemap versus une boîte à outils de nettoyage plus large, et ce qui correspond à ce que vous cherchez.</description>
     </item>
     <item>
       <title>Comment libérer de l'espace disque sur Windows 11 : le guide complet</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/free-up-disk-space-windows-11.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/free-up-disk-space-windows-11.html</guid>
+      <link>https://getpurgecore.com/fr/blog/free-up-disk-space-windows-11.html</link>
+      <guid>https://getpurgecore.com/fr/blog/free-up-disk-space-windows-11.html</guid>
       <category>Guide</category>
       <description>Tous les endroits où Windows cache réellement de l'espace récupérable, de Storage Sense au dossier WinSxS, dans l'ordre qui vous redonne le plus d'espace pour le moins de risque.</description>
     </item>
     <item>
       <title>Qu'est-ce qui occupe l'espace sur votre PC Windows ? Comment vraiment le découvrir</title>
-      <link>https://jeremstyke.github.io/purgecore/fr/blog/find-whats-using-storage-windows.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/fr/blog/find-whats-using-storage-windows.html</guid>
+      <link>https://getpurgecore.com/fr/blog/find-whats-using-storage-windows.html</link>
+      <guid>https://getpurgecore.com/fr/blog/find-whats-using-storage-windows.html</guid>
       <category>Guide</category>
       <description>Pourquoi les tailles de dossiers de l'Explorateur de fichiers vous mentent, et les moyens les plus rapides de trouver la vraie source d'un disque plein.</description>
     </item>

@@ -163,7 +163,7 @@ fun StorageScreen() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 8.dp, bottom = 16.dp)
-                    .clickable { uriHandler.openUri("https://jeremstyke.github.io/purgecore/mobile.html") },
+                    .clickable { uriHandler.openUri("https://getpurgecore.com/mobile.html") },
             )
             DonateButton(modifier = Modifier.padding(bottom = 8.dp))
         }

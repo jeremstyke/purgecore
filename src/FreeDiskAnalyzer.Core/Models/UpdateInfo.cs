@@ -18,8 +18,8 @@ public sealed record UpdateInfo(bool IsUpdateAvailable, string? LatestVersion, s
     /// </summary>
     public string? GetBlogArticleUrl(bool isFrench = false) => LatestVersion is { } version
         ? isFrench
-            ? $"https://jeremstyke.github.io/purgecore/fr/blog/v{version.Replace('.', '-')}-release-notes.html"
-            : $"https://jeremstyke.github.io/purgecore/blog/v{version.Replace('.', '-')}-release-notes.html"
+            ? $"https://getpurgecore.com/fr/blog/v{version.Replace('.', '-')}-release-notes.html"
+            : $"https://getpurgecore.com/blog/v{version.Replace('.', '-')}-release-notes.html"
         : null;
 
     public string? BlogArticleUrl => GetBlogArticleUrl();

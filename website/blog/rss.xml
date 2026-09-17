@@ -2,274 +2,274 @@
 <rss version="2.0">
   <channel>
     <title>PurgeCore Blog</title>
-    <link>https://jeremstyke.github.io/purgecore/blog/</link>
+    <link>https://getpurgecore.com/blog/</link>
     <description>Guides on freeing up disk space, finding what's using your storage, and keeping a Windows PC running smoothly.</description>
     <language>en</language>
 
     <item>
       <title>PurgeCore v1.11.7: A Multi-Color Storage Ring</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-7-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-7-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-7-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-7-release-notes.html</guid>
       <category>Release notes</category>
       <description>The Dashboard's storage ring now shows one colored arc per category, matching the category list below it.</description>
     </item>
     <item>
       <title>PurgeCore Mobile: What's Actually Using Your Storage</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-storage-breakdown.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-storage-breakdown.html</guid>
+      <link>https://getpurgecore.com/blog/purgecore-mobile-storage-breakdown.html</link>
+      <guid>https://getpurgecore.com/blog/purgecore-mobile-storage-breakdown.html</guid>
       <category>Mobile</category>
       <description>Shows a breakdown of your storage by category: photos, videos, and everything else, right on the Storage screen.</description>
     </item>
     <item>
       <title>PurgeCore Mobile: Update Notifications, More Color</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-updates-colors.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-updates-colors.html</guid>
+      <link>https://getpurgecore.com/blog/purgecore-mobile-updates-colors.html</link>
+      <guid>https://getpurgecore.com/blog/purgecore-mobile-updates-colors.html</guid>
       <category>Mobile</category>
       <description>Checks for updates on launch and shows a banner when one is ready, plus more color across the app matching PurgeCore for Windows.</description>
     </item>
     <item>
       <title>PurgeCore Mobile: Install Fixed on Real Devices</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-signing-fix.html</guid>
+      <link>https://getpurgecore.com/blog/purgecore-mobile-signing-fix.html</link>
+      <guid>https://getpurgecore.com/blog/purgecore-mobile-signing-fix.html</guid>
       <category>Mobile</category>
       <description>The APK had no signing configuration at all, so real Android devices refused to install it. Fixed, and updates now install cleanly too.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.5: Two False-Positive Bugs Fixed</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-5-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-5-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-5-release-notes.html</guid>
       <category>Release notes</category>
       <description>Browser cleanup wrongly reporting a browser as open, and the startup manager showing a stale disabled state, both fixed.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.4: Download Links Fixed</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-4-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-4-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-4-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-4-release-notes.html</guid>
       <category>Release notes</category>
       <description>The website's download button and the app's own update checker were both silently broken since PurgeCore Mobile joined this repository.</description>
     </item>
     <item>
       <title>PurgeCore Mobile: Clearer Beta Label, a Second Ad Format</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-beta-native-ads.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-beta-native-ads.html</guid>
+      <link>https://getpurgecore.com/blog/purgecore-mobile-beta-native-ads.html</link>
+      <guid>https://getpurgecore.com/blog/purgecore-mobile-beta-native-ads.html</guid>
       <category>Mobile</category>
       <description>Clearly marked as Beta everywhere, and a native ad card added alongside the existing banner.</description>
     </item>
     <item>
       <title>PurgeCore Mobile: How It's Funded</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-funding.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/purgecore-mobile-funding.html</guid>
+      <link>https://getpurgecore.com/blog/purgecore-mobile-funding.html</link>
+      <guid>https://getpurgecore.com/blog/purgecore-mobile-funding.html</guid>
       <category>Mobile</category>
       <description>Free, funded by a single banner ad and nothing else. No paywall, no data sold.</description>
     </item>
     <item>
       <title>Introducing PurgeCore Mobile</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/introducing-purgecore-mobile.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/introducing-purgecore-mobile.html</guid>
+      <link>https://getpurgecore.com/blog/introducing-purgecore-mobile.html</link>
+      <guid>https://getpurgecore.com/blog/introducing-purgecore-mobile.html</guid>
       <category>Mobile</category>
       <description>A free Android companion app with a storage overview and a duplicate photo and video finder.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.3: Drive Selector Fixes</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-3-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-3-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-3-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-3-release-notes.html</guid>
       <category>Release notes</category>
       <description>The drive dropdown styling and a duplicate "C:\ - C:\" display bug fixed, Battery Health added to the documentation.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.2: Invisible Tabs Fixed</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-2-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-2-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-2-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-2-release-notes.html</guid>
       <category>Release notes</category>
       <description>The Cleanup and Explore sub-tabs were rendering as white text on a white background, confirmed by a screenshot and fixed.</description>
     </item>
     <item>
       <title>Best Free CCleaner Alternatives in 2026</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/best-ccleaner-alternatives.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/best-ccleaner-alternatives.html</guid>
+      <link>https://getpurgecore.com/blog/best-ccleaner-alternatives.html</link>
+      <guid>https://getpurgecore.com/blog/best-ccleaner-alternatives.html</guid>
       <category>Guide</category>
       <description>An honest look at PurgeCore, BleachBit, and WinDirStat, what each does best, and which fits your situation.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.1: A Latent Freeze Risk Fixed</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-1-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-1-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-1-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-1-release-notes.html</guid>
       <category>Release notes</category>
       <description>A known .NET deadlock pitfall in Battery Health and Flush DNS, found during a code audit, fixed before it ever caused a problem.</description>
     </item>
     <item>
       <title>PurgeCore v1.11.0: Battery Health</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-11-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-11-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-11-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-11-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>PurgeCore v1.11.0 adds a Battery Health tab, generating Windows' own battery diagnostic report in one click. Hidden automatically on desktop PCs.</description>
     </item>
     <item>
       <title>PurgeCore Now Has a PAD File</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/pad-file-available.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/pad-file-available.html</guid>
+      <link>https://getpurgecore.com/blog/pad-file-available.html</link>
+      <guid>https://getpurgecore.com/blog/pad-file-available.html</guid>
       <category>Announcement</category>
       <description>PurgeCore publishes a PAD (Portable Application Description) file, so software directories can list it with accurate, up-to-date details automatically.</description>
     </item>
     <item>
       <title>PurgeCore v1.10.0: No More Popups Mid-Cleanup</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-10-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-10-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-10-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-10-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>A native Windows dialog interrupting cleanup on locked files, icon contrast, a What's new link in the update banner, ~15 unstyled buttons fixed, a Supporters button, and NordVPN moved up on the Dashboard.</description>
     </item>
     <item>
       <title>PurgeCore v1.9.1: Icons Everywhere</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-9-1-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-9-1-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-9-1-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-9-1-release-notes.html</guid>
       <category>Release notes</category>
       <description>PurgeCore v1.9.1 adds icons to buttons and links that didn't have them: NordVPN, DeleteMe, Free up RAM, Flush DNS, Uninstall, and more.</description>
     </item>
     <item>
       <title>PurgeCore v1.9.0: Flush DNS Cache</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-9-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-9-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-9-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-9-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>A one-click DNS cache flush in the Performance tab, plus the website and README catching up on the Uninstall feature from v1.8.0.</description>
     </item>
     <item>
       <title>PurgeCore v1.8.3: A Full Code Audit</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-8-3-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-8-3-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-8-3-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-8-3-release-notes.html</guid>
       <category>Release notes</category>
       <description>A full audit of the codebase found and fixed a Startup Manager desync bug and a leftover from the rename to PurgeCore.</description>
     </item>
     <item>
       <title>PurgeCore v1.8.2: Startup Manager and Cookie Whitelist Fixes</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-8-2-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-8-2-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-8-2-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-8-2-release-notes.html</guid>
       <category>Release notes</category>
       <description>Toggling a startup item twice in a row could silently fail, and cookie whitelist entries pasted as full URLs protected nothing. Both fixed.</description>
     </item>
     <item>
       <title>PurgeCore v1.8.0: Uninstall Programs</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-8-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-8-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-8-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-8-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>A new Uninstall tab lists installed programs, largest first, and uninstalls them using each program's own official uninstaller.</description>
     </item>
     <item>
       <title>PurgeCore v1.7.1: A New Typeface</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-7-1-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-7-1-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-7-1-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-7-1-release-notes.html</guid>
       <category>Release notes</category>
       <description>PurgeCore v1.7.1 embeds Inter as the app's font instead of the default Windows system font, matching the website's typeface for a consistent look.</description>
     </item>
     <item>
       <title>PurgeCore v1.7.0: A Real Cleanup Bug Fixed, and a New Look</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-7-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-7-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-7-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-7-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>A real System cleanup bug fixed (reported freeing space that wasn't actually freed), a bold new colorful design, a separate Blog tab, and clickable drivers with plain explanations.</description>
     </item>
     <item>
       <title>PurgeCore v1.6.2: Report a Bug, More Color</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-6-2-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-6-2-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-6-2-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-6-2-release-notes.html</guid>
       <category>Release notes</category>
       <description>What's new in PurgeCore v1.6.2: a Report a bug button, colored category bars on the Dashboard, and a bouncier button-press animation.</description>
     </item>
     <item>
       <title>PurgeCore v1.6.0: Smoother Interface</title>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-6-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-6-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-6-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-6-0-release-notes.html</guid>
       <category>Release notes</category>
       <description>What's new in PurgeCore v1.6.0: smooth animated buttons, an animated sidebar, and a fade-in transition when switching tabs.</description>
     </item>
     <item>
       <title>PurgeCore v1.5.0: Browser Cleanup Fixes</title>
       <category>Release notes</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-5-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-5-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-5-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-5-0-release-notes.html</guid>
       <description>What's new in PurgeCore v1.5.0: progress indicators for browser cleanup, accurate freed-space reporting, and a fix for a misleading confirmation message.</description>
     </item>
     <item>
       <title>Free Disk Analyzer Is Now PurgeCore</title>
       <category>Announcement</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/renamed-to-purgecore.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/renamed-to-purgecore.html</guid>
+      <link>https://getpurgecore.com/blog/renamed-to-purgecore.html</link>
+      <guid>https://getpurgecore.com/blog/renamed-to-purgecore.html</guid>
       <description>Free Disk Analyzer has been renamed to PurgeCore. Same app, same free-forever approach, same download, just a new name.</description>
     </item>
     <item>
       <title>PurgeCore vs CCleaner: Which One Should You Use?</title>
       <category>Comparison</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-ccleaner.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-ccleaner.html</guid>
+      <link>https://getpurgecore.com/blog/free-disk-analyzer-vs-ccleaner.html</link>
+      <guid>https://getpurgecore.com/blog/free-disk-analyzer-vs-ccleaner.html</guid>
       <description>An honest comparison of PurgeCore and CCleaner: what each one does well, where CCleaner is still ahead, and where a registry cleaner and paid upsells change the picture.</description>
     </item>
     <item>
       <title>PurgeCore vs BleachBit: Which One Should You Use?</title>
       <category>Comparison</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-bleachbit.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-bleachbit.html</guid>
+      <link>https://getpurgecore.com/blog/free-disk-analyzer-vs-bleachbit.html</link>
+      <guid>https://getpurgecore.com/blog/free-disk-analyzer-vs-bleachbit.html</guid>
       <description>An honest comparison of PurgeCore and BleachBit: open-source privacy cleaning versus disk-space analysis, and where each one is the better fit.</description>
     </item>
     <item>
       <title>PurgeCore vs WinDirStat: Which One Should You Use?</title>
       <category>Comparison</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-windirstat.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/free-disk-analyzer-vs-windirstat.html</guid>
+      <link>https://getpurgecore.com/blog/free-disk-analyzer-vs-windirstat.html</link>
+      <guid>https://getpurgecore.com/blog/free-disk-analyzer-vs-windirstat.html</guid>
       <description>An honest comparison of PurgeCore and WinDirStat: treemap visualization versus a broader cleanup toolkit, and which fits what you're trying to do.</description>
     </item>
     <item>
       <title>PurgeCore v1.2.0: Startup Manager</title>
       <category>Release notes</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-2-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-2-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-2-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-2-0-release-notes.html</guid>
       <description>What's new in PurgeCore v1.2.0: a Startup Manager to speed up boot time and reduce clutter at login.</description>
     </item>
     <item>
       <title>PurgeCore v1.1.0: Cleanup That Actually Cleans</title>
       <category>Release notes</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-1-0-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-1-0-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-1-0-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-1-0-release-notes.html</guid>
       <description>What's new in PurgeCore v1.1.0: safe deletion for duplicates and empty folders, browser cleanup for Chrome/Edge/Firefox, a cookie whitelist, PC cleanup, RAM optimization, and risk indicators on everything.</description>
     </item>
     <item>
       <title>PurgeCore v1.0.2: In-App Update Notifications</title>
       <category>Release notes</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-0-2-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-0-2-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-0-2-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-0-2-release-notes.html</guid>
       <description>What's new in PurgeCore v1.0.2: a banner that appears when a newer version is out, with one-click download and install.</description>
     </item>
     <item>
       <title>PurgeCore v1.0.1: Cleanup, Duplicates, RAM, and CSV Export</title>
       <category>Release notes</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/v1-0-1-release-notes.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/v1-0-1-release-notes.html</guid>
+      <link>https://getpurgecore.com/blog/v1-0-1-release-notes.html</link>
+      <guid>https://getpurgecore.com/blog/v1-0-1-release-notes.html</guid>
       <description>What's new in PurgeCore v1.0.1: a Cleanup tab with duplicate finder, old files, empty folders, a RAM optimizer, and CSV export.</description>
     </item>
     <item>
       <title>How to Free Up Disk Space on Windows 11: The Complete Guide</title>
       <category>Guide</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/free-up-disk-space-windows-11.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/free-up-disk-space-windows-11.html</guid>
+      <link>https://getpurgecore.com/blog/free-up-disk-space-windows-11.html</link>
+      <guid>https://getpurgecore.com/blog/free-up-disk-space-windows-11.html</guid>
       <description>Every place Windows actually hides reclaimable space, from Storage Sense to the WinSxS folder, in the order that gives you the most space back for the least risk.</description>
     </item>
     <item>
       <title>What's Taking Up Space on Your Windows PC? How to Actually Find Out</title>
       <category>Guide</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/find-whats-using-storage-windows.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/find-whats-using-storage-windows.html</guid>
+      <link>https://getpurgecore.com/blog/find-whats-using-storage-windows.html</link>
+      <guid>https://getpurgecore.com/blog/find-whats-using-storage-windows.html</guid>
       <description>Why File Explorer's folder sizes lie to you, and the fastest ways to find the real source of a full drive.</description>
     </item>
     <item>
       <title>How to Find and Delete Duplicate Files on Windows</title>
       <category>Guide</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/find-delete-duplicate-files-windows.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/find-delete-duplicate-files-windows.html</guid>
+      <link>https://getpurgecore.com/blog/find-delete-duplicate-files-windows.html</link>
+      <guid>https://getpurgecore.com/blog/find-delete-duplicate-files-windows.html</guid>
       <description>Why duplicates pile up without you noticing, how they're actually detected, and how to remove them safely.</description>
     </item>
     <item>
       <title>Windows Storage Sense vs. Third-Party Disk Cleaners: What's the Difference</title>
       <category>Guide</category>
-      <link>https://jeremstyke.github.io/purgecore/blog/storage-sense-vs-disk-cleaners.html</link>
-      <guid>https://jeremstyke.github.io/purgecore/blog/storage-sense-vs-disk-cleaners.html</guid>
+      <link>https://getpurgecore.com/blog/storage-sense-vs-disk-cleaners.html</link>
+      <guid>https://getpurgecore.com/blog/storage-sense-vs-disk-cleaners.html</guid>
       <description>What Storage Sense actually automates, where it falls short, and when a dedicated tool is worth using instead.</description>
     </item>
   </channel>

@@ -14,7 +14,7 @@
 <State_Province></State_Province>
 <Zip_Postal_Code></Zip_Postal_Code>
 <Country>France</Country>
-<Company_WebSite_URL>https://jeremstyke.github.io/purgecore/</Company_WebSite_URL>
+<Company_WebSite_URL>https://getpurgecore.com/</Company_WebSite_URL>
 <Contact_Info>
 <Author_First_Name>Jeremy</Author_First_Name>
 <Author_Last_Name>Jury</Author_Last_Name>
@@ -88,11 +88,11 @@ PurgeCore has one tier: everything, free, forever. No premium upgrade, no ads in
 
 <Web_Info>
 <Application_URLs>
-<Application_Info_URL>https://jeremstyke.github.io/purgecore/about.html</Application_Info_URL>
+<Application_Info_URL>https://getpurgecore.com/about.html</Application_Info_URL>
 <Application_Order_URL></Application_Order_URL>
 <Application_Screenshot_URL></Application_Screenshot_URL>
-<Application_Icon_URL>https://jeremstyke.github.io/purgecore/assets/og-image-icon.png</Application_Icon_URL>
-<Application_XML_DIZ_URL>https://jeremstyke.github.io/purgecore/pad_file.xml</Application_XML_DIZ_URL>
+<Application_Icon_URL>https://getpurgecore.com/assets/og-image-icon.png</Application_Icon_URL>
+<Application_XML_DIZ_URL>https://getpurgecore.com/pad_file.xml</Application_XML_DIZ_URL>
 </Application_URLs>
 
 <Download_URLs>

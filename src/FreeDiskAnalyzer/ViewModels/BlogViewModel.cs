@@ -10,8 +10,8 @@ namespace FreeDiskAnalyzer.ViewModels;
 
 public sealed partial class BlogViewModel : ObservableObject
 {
-    public const string EnglishBlogUrl = "https://jeremstyke.github.io/purgecore/blog/";
-    public const string FrenchBlogUrl = "https://jeremstyke.github.io/purgecore/fr/blog/";
+    public const string EnglishBlogUrl = "https://getpurgecore.com/blog/";
+    public const string FrenchBlogUrl = "https://getpurgecore.com/fr/blog/";
     private const int LatestArticleCountPerGroup = 4;
     private const int FetchCount = 12;
 

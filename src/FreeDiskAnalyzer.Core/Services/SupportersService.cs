@@ -4,7 +4,7 @@ namespace FreeDiskAnalyzer.Core.Services;
 
 public sealed class SupportersService : ISupportersService
 {
-    private const string SupportersUrl = "https://jeremstyke.github.io/purgecore/supporters.json";
+    private const string SupportersUrl = "https://getpurgecore.com/supporters.json";
 
     public async Task<IReadOnlyList<string>> GetSupportersAsync(CancellationToken cancellationToken = default)
     {

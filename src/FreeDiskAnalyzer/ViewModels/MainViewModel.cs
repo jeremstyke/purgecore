@@ -248,6 +248,6 @@ public sealed partial class MainViewModel : ObservableObject
     }
 
     public const string ReportBugUrl = "mailto:juryjeremy@gmail.com?subject=PurgeCore%20Windows%20-%20Bug%20report";
-    public const string SupportersUrlEn = "https://jeremstyke.github.io/purgecore/supporters.html";
-    public const string SupportersUrlFr = "https://jeremstyke.github.io/purgecore/fr/supporters.html";
+    public const string SupportersUrlEn = "https://getpurgecore.com/supporters.html";
+    public const string SupportersUrlFr = "https://getpurgecore.com/fr/supporters.html";
 }

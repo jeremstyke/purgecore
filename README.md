@@ -13,10 +13,10 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
 
 🇫🇷 [Lire en français](README.fr.md)
 
-> **Two products live in this repository:** **PurgeCore PC** (Windows, this README) and **[PurgeCore Mobile](https://jeremstyke.github.io/purgecore/mobile.html)** (Android, storage overview and duplicate photo finder). Separate apps, separate code (`src/` vs `mobile/`), separate release tags (`v*` vs `mobile-v*`).
+> **Two products live in this repository:** **PurgeCore PC** (Windows, this README) and **[PurgeCore Mobile](https://getpurgecore.com/mobile.html)** (Android, storage overview and duplicate photo finder). Separate apps, separate code (`src/` vs `mobile/`), separate release tags (`v*` vs `mobile-v*`).
 
 <p align="center">
-  <a href="https://jeremstyke.github.io/purgecore/">
+  <a href="https://getpurgecore.com/">
     <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Website-2563EB?style=for-the-badge" alt="Website" />
   </a>
 </p>
@@ -33,7 +33,7 @@ Disk analysis, duplicates, browser and PC cleanup, startup and RAM management. N
   </a>
 </p>
 
-<p align="center"><sub>Power user? <a href="../../releases/download/v1.11.7/PurgeCore-Portable.zip">Download the portable version</a> instead, no installation, no admin rights needed. · Software directory? <a href="https://jeremstyke.github.io/purgecore/pad_file.xml">PAD file here</a>.</sub></p>
+<p align="center"><sub>Power user? <a href="../../releases/download/v1.11.7/PurgeCore-Portable.zip">Download the portable version</a> instead, no installation, no admin rights needed. · Software directory? <a href="https://getpurgecore.com/pad_file.xml">PAD file here</a>.</sub></p>
 
 > [View all releases](../../releases)
 

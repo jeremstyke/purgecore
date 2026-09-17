@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jeremstyke.github.io/purgecore/sitemap.xml
+Sitemap: https://getpurgecore.com/sitemap.xml
