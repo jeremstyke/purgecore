@@ -32,6 +32,9 @@ public sealed partial class DashboardViewModel : ObservableObject
 
     public ObservableCollection<CategoryUsageViewModel> CategoryBreakdown { get; } = new();
 
+    [ObservableProperty]
+    private IReadOnlyList<Controls.RingSegment> ringSegments = Array.Empty<Controls.RingSegment>();
+
     public DashboardViewModel(IDriveEnumerator driveEnumerator, ScanResultStore scanResultStore)
     {
         _driveEnumerator = driveEnumerator;
@@ -63,14 +66,20 @@ public sealed partial class DashboardViewModel : ObservableObject
 
         if (result is null || result.BytesByCategory.Count == 0)
         {
+            RingSegments = Array.Empty<Controls.RingSegment>();
             return;
         }
 
         var maxBytes = result.BytesByCategory.Values.Max();
-        if (maxBytes <= 0) return;
+        if (maxBytes <= 0)
+        {
+            RingSegments = Array.Empty<Controls.RingSegment>();
+            return;
+        }
 
         var palette = new[] { "AccentBrush", "TealBrush", "VioletBrush", "AmberBrush", "RoseBrush" };
         var index = 0;
+        var segments = new List<Controls.RingSegment>();
 
         foreach (var (category, bytes) in result.BytesByCategory.OrderByDescending(kvp => kvp.Value))
         {
@@ -83,10 +92,15 @@ public sealed partial class DashboardViewModel : ObservableObject
             {
                 Label = category.ToString(),
                 BytesDisplay = ByteSizeFormatter.Format(bytes),
+                RawBytes = bytes,
                 BarPercentage = bytes / (double)maxBytes * 100,
                 BarBrush = brush
             });
+
+            segments.Add(new Controls.RingSegment(bytes, brush));
         }
+
+        RingSegments = segments;
     }
 
     [RelayCommand]

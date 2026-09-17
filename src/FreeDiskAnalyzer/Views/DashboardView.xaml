@@ -72,7 +72,8 @@
                         <TextBlock Text="{x:Static res:Strings.Dashboard_Storage}" FontWeight="SemiBold" FontSize="16"
                                    HorizontalAlignment="Left" Foreground="{DynamicResource TextPrimaryBrush}"
                                    Margin="0,0,0,16"/>
-                        <controls:DonutProgressRing UsedPercentage="{Binding SelectedDrive.UsedPercentage, Mode=OneWay}"/>
+                        <controls:DonutProgressRing UsedPercentage="{Binding SelectedDrive.UsedPercentage, Mode=OneWay}"
+                                                     Segments="{Binding RingSegments, Mode=OneWay}"/>
                         <StackPanel Orientation="Horizontal" Margin="0,16,0,0" HorizontalAlignment="Center">
                             <StackPanel Margin="0,0,24,0">
                                 <TextBlock Text="{x:Static res:Strings.Dashboard_Used}" Style="{StaticResource CaptionTextStyle}"/>
