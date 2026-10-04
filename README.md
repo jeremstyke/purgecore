@@ -154,3 +154,11 @@ This repository is public.
 ## Support
 
 If PurgeCore is useful to you, you can [offer a coffee](https://jeremstyke.gumroad.com/coffee).
+
+---
+
+### ⚽ Also by @jeremstyke: Daily Score
+
+Guess the score of one big football match a day, climb the rankings and play leagues with your friends. Free, 9 languages, no betting.
+
+👉 [Play Daily Score](https://dailyscoreapp.com/?src=github_purgecore) · [Play on Telegram](https://t.me/DailyScorefootbot?start=src_github_purgecore)
